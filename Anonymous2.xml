@@ -1,0 +1,335 @@
+<<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="hide-it.xsl" type="text/xsl"?>
+
+<channels>
+
+<channel>
+<name>Kodi Addon</name>
+<link>http://Ignoreme</link>
+<thumbnail>http://1.bp.blogspot.com/-Z5LarVHjc90/VkIq8VsZ3aI/AAAAAAAAPCM/esE0dqZ9fxU/s1600/Iptv%2BLivre%2BAdd-on%2BFor%2BKodi%2BXbmc%2B1.png</thumbnail>
+<externallink>https://raw.githubusercontent.com/twlizer/plugin.video.unhenged/master/anon/AddonTv.xml</externallink>
+<fanart>https://seo-michael.co.uk/content/images/2016/02/coldkeysfeat.jpg</fanart>
+</channel>
+
+
+<channel>
+<name>World IPTV Lists</name>
+<link>http://Ignoreme</link>
+<thumbnail>https://sourcetv.info/wp-content/uploads/2015/09/world-300x205.jpg</thumbnail>
+<externallink>https://raw.githubusercontent.com/twlizer/plugin.video.unhenged/master/anon/worldtv.xml</externallink>
+<fanart>https://seo-michael.co.uk/content/images/2016/02/coldkeysfeat.jpg</fanart>
+</channel>
+
+<channel>
+<name>Kids Section</name>
+<link>http://Ignoreme</link>
+<thumbnail>https://www.themindgames.com/wp-content/uploads/2014/06/images_kids_logo.jpg</thumbnail>
+<externallink>https://raw.githubusercontent.com/twlizer/plugin.video.unhenged/master/anon/kis.xml</externallink>
+<fanart>http://www.jbgcoupons.in/wp-content/uploads/2014/01/Jabong-kids-collection-e1389680563707.jpg</fanart>
+</channel>
+
+<channel>
+<name>News</name>
+<link>http://Ignoreme</link>
+<thumbnail>http://www.vsuspectator.com/wp-content/uploads/sites/55/2015/01/News-Header-640x330.png</thumbnail>
+<externallink>https://raw.githubusercontent.com/twlizer/plugin.video.unhenged/master/anon/news.xml</externallink>
+<fanart>https://seo-michael.co.uk/content/images/2016/02/coldkeysfeat.jpg</fanart>
+</channel>
+
+<channel>
+<name>YouTube</name>
+<link>http://Ignoreme</link>
+<thumbnail>https://s-media-cache-ak0.pinimg.com/originals/2d/12/d4/2d12d40c109f62baf5c781c40b4574de.png</thumbnail>
+<externallink>https://raw.githubusercontent.com/twlizer/plugin.video.unhenged/master/anon/youtube.xml</externallink>
+<fanart>https://seo-michael.co.uk/content/images/2016/02/coldkeysfeat.jpg</fanart>
+</channel>
+
+<channel>
+<name>18+ Adult</name>
+<link>http://Ignoreme</link>
+<thumbnail>http://previews.123rf.com/images/branche/branche1502/branche150200001/36187081-Adults-only-sign-XXX-sign-Stock-Vector.jpg</thumbnail>
+<externallink>https://raw.githubusercontent.com/twlizer/plugin.video.unhenged/master/anon/Adult.xml</externallink>
+<fanart>https://seo-michael.co.uk/content/images/2016/02/coldkeysfeat.jpg</fanart>
+</channel>
+
+<channel>
+<name>24/7 TV Shows</name>
+<link>http://Ignoreme</link>
+<thumbnail>http://kodicommunity.com/wp-content/uploads/2015/08/24-7-1.jpg</thumbnail>
+<externallink>https://raw.githubusercontent.com/twlizer/plugin.video.unhenged/master/anon/24-7shows.xml</externallink>
+<fanart>http://kodicommunity.com/wp-content/uploads/2015/08/24-7-1.jpg</fanart>
+</channel>
+
+<channel>
+<name>Cartoons</name>
+<link>http://Ignoreme</link>
+<thumbnail>http://vignette1.wikia.nocookie.net/cartoonnetwork/images/2/26/Cartoon_Cartoons_logo.jpg</thumbnail>
+<externallink>https://raw.githubusercontent.com/twlizer/plugin.video.unhenged/master/anon/Cartoons.xml</externallink>
+<fanart>https://seo-michael.co.uk/content/images/2016/02/coldkeysfeat.jpg</fanart>
+</channel>
+
+<channel>
+<name>Sports</name>
+<link>http://Ignoreme</link>
+<thumbnail>https://pbs.twimg.com/profile_images/378800000796252042/bcfc8a1fd95fb8cdeae9d5706b57d7c7_400x400.jpeg</thumbnail>
+<externallink>https://raw.githubusercontent.com/twlizer/plugin.video.unhenged/master/anon/sports.xml</externallink>
+<fanart>https://seo-michael.co.uk/content/images/2016/02/coldkeysfeat.jpg</fanart>
+</channel>
+
+<channel>
+<name>Movies</name>
+<link>http://Ignoreme</link>
+<thumbnail>http://az616578.vo.msecnd.net/files/2016/02/12/635908560684188177-68979201_large_movie-night-title6.png</thumbnail>
+<externallink>https://raw.githubusercontent.com/twlizer/plugin.video.unhenged/master/anon/movies.xml</externallink>
+<fanart>http://az616578.vo.msecnd.net/files/2016/02/12/635908560684188177-68979201_large_movie-night-title6.png</fanart>
+</channel>
+
+
+<channel>
+<name>Anime Movies/Shows</name>
+<link>http://Ignoreme</link>
+<thumbnail>https://i.ytimg.com/vi/g8bkfwcD7Jc/maxresdefault.jpg</thumbnail>
+<externallink>https://raw.githubusercontent.com/twlizer/plugin.video.unhenged/master/anon/anime.xml</externallink>
+<fanart>https://i.ytimg.com/vi/g8bkfwcD7Jc/maxresdefault.jpg</fanart>
+</channel>
+
+
+</channels>
+
+
+
+
+
+<item>
+<title>Friday the 13th (1980) 720p-HD </title>
+<meta>
+<content>movie</content>
+<imdb>tt0080761</imdb>
+<title>Friday the 13th (1980) 720p-HD </title>
+<year>1980</year>
+</meta>
+<link>
+<sublink>https://uptostream.com/e0pjo6bru0rh</sublink>
+</link>
+<thumbnail>http://ecx.images-amazon.com/images/I/91rix1Pp3aL._SL1500_.jpg</thumbnail>
+<fanart>http://screenrant.com/wp-content/uploads/Friday-the-13th-TV-Series-in-development-The-CW.jpg</fanart>
+</item>
+
+<item>
+<title>Friday the 13th Part 2 (1981) 1080p-HD</title>
+<meta>
+<content>movie</content>
+<imdb>tt0082418</imdb>
+<title>Friday the 13th Part 2 (1981) 1080p-HD</title>
+<year>1981</year>
+</meta>
+<link>
+<sublink>https://uptostream.com/5hz4cy8vv1xu</sublink>
+</link>
+<thumbnail>http://bluraymedia.ign.com/bluray/image/object/143/14341357/friday2.jpg</thumbnail>
+<fanart>http://screenrant.com/wp-content/uploads/Friday-the-13th-TV-Series-in-development-The-CW.jpg</fanart>
+</item>
+
+<item>
+<title>Friday the 13th Part III (1982) 1080p-HD</title>
+<meta>
+<content>movie</content>
+<imdb>tt0083972</imdb>
+<title>Friday the 13th Part III (1982) 1080p-HD</title>
+<year>1982</year>
+</meta>
+<link>
+<sublink>https://uptostream.com/e13yji2z4vrp</sublink>
+</link>
+<thumbnail>http://ecx.images-amazon.com/images/I/91mKD7pM-AL._SL1500_.jpg</thumbnail>
+<fanart>http://screenrant.com/wp-content/uploads/Friday-the-13th-TV-Series-in-development-The-CW.jpg</fanart>
+</item>
+
+<item>
+<title>Friday the 13th: The Final Chapter (1984) 1080p-HD</title>
+<meta>
+<content>movie</content>
+<imdb>tt0087298</imdb>
+<title>Friday the 13th: The Final Chapter (1984) 1080p-HD</title>
+<year>1984</year>
+</meta>
+<link>
+<sublink>https://uptostream.com/zem9zo4t88rk</sublink>
+</link>
+<thumbnail>http://images.static-bluray.com/movies/covers/25033_front.jpg</thumbnail>
+<fanart>http://screenrant.com/wp-content/uploads/Friday-the-13th-TV-Series-in-development-The-CW.jpg</fanart>
+</item>
+
+<item>
+<title>Friday the 13th: A New Beginning (1985) 1080p-HD</title>
+<meta>
+<content>movie</content>
+<imdb>tt0089173</imdb>
+<title>Friday the 13th: A New Beginning (1985) 1080p-HD</title>
+<year>1985</year>
+</meta>
+<link>
+<sublink>https://uptostream.com/dzmsoexlpvbg</sublink>
+</link>
+<thumbnail>http://images4.static-bluray.com/movies/covers/42169_front.jpg</thumbnail>
+<fanart>http://screenrant.com/wp-content/uploads/Friday-the-13th-TV-Series-in-development-The-CW.jpg</fanart>
+</item>
+
+<item>
+<title>Friday the 13th Part VI: Jason Lives (1986) 1080p-HD </title>
+<meta>
+<content>movie</content>
+<imdb>tt0091080</imdb>
+<title>Friday the 13th Part VI: Jason Lives (1986) 1080p-HD </title>
+<year>1986</year>
+</meta>
+<link>
+<sublink>https://uptostream.com/kuds2ei2pm3m</sublink>
+</link>
+<thumbnail>http://images3.static-bluray.com/movies/covers/42168_front.jpg</thumbnail>
+<fanart>http://screenrant.com/wp-content/uploads/Friday-the-13th-TV-Series-in-development-The-CW.jpg</fanart>
+</item>
+
+<item>
+<title>Friday the 13th Part VII: The New Blood (1988) 720p-HD</title>
+<meta>
+<content>movie</content>
+<imdb>tt0095179</imdb>
+<title>Friday the 13th Part VII: The New Blood (1988) 720p-HD</title>
+<year>1988</year>
+</meta>
+<link>
+<sublink>https://uptostream.com/bsicmkqtyreu</sublink>
+</link>
+<thumbnail>http://images2.static-bluray.com/movies/covers/42167_front.jpg</thumbnail>
+<fanart>http://screenrant.com/wp-content/uploads/Friday-the-13th-TV-Series-in-development-The-CW.jpg</fanart>
+</item>
+
+<item>
+<title>Friday the 13th Part VIII: Jason Takes Manhattan (1989) 1080p-HD</title>
+<meta>
+<content>movie</content>
+<imdb>tt0097388</imdb>
+<title>Friday the 13th Part VIII: Jason Takes Manhattan (1989) 1080p-HD</title>
+<year>1989</year>
+</meta>
+<link>
+<sublink>https://uptostream.com/vf2ea6a4h7pz</sublink>
+</link>
+<thumbnail>http://images.static-bluray.com/movies/covers/42115_front.jpg</thumbnail>
+<fanart>http://screenrant.com/wp-content/uploads/Friday-the-13th-TV-Series-in-development-The-CW.jpg</fanart>
+</item>
+
+<item>
+<title>Jason Goes to Hell: The Final Friday (1993) 1080p-HD</title>
+<meta>
+<content>movie</content>
+<imdb>tt0107254</imdb>
+<title>Jason Goes to Hell: The Final Friday (1993) 1080p-HD</title>
+<year>1993</year>
+</meta>
+<link>
+<sublink>https://uptostream.com/gazkvb0uo594</sublink>
+</link>
+<thumbnail>http://images4.static-bluray.com/movies/covers/42143_front.jpg</thumbnail>
+<fanart>http://screenrant.com/wp-content/uploads/Friday-the-13th-TV-Series-in-development-The-CW.jpg</fanart>
+</item>
+
+<item>
+<title>Jason X (2001) 1080p-HD</title>
+<meta>
+<content>movie</content>
+<imdb>tt0211443</imdb>
+<title>Jason X (2001) 1080p-HD</title>
+<year>2001</year>
+</meta>
+<link>
+<sublink>https://uptostream.com/bz0t2q23m87a</sublink>
+</link>
+<thumbnail>http://images4.static-bluray.com/movies/covers/29373_front.jpg</thumbnail>
+<fanart>http://screenrant.com/wp-content/uploads/Friday-the-13th-TV-Series-in-development-The-CW.jpg</fanart>
+</item>
+
+<item>
+<title>Freddy vs. Jason (2003) 1080p-HD </title>
+<meta>
+<content>movie</content>
+<imdb>tt0329101</imdb>
+<title>Freddy vs. Jason (2003) 1080p-HD</title>
+<year>2003</year>
+</meta>
+<link>
+<sublink>https://uptostream.com/ur9yb6tsi7zt</sublink>
+</link>
+<thumbnail>http://www.1080b.com/wp-content/freddycontrajason-bd-480a1.jpg</thumbnail>
+<fanart>http://screenrant.com/wp-content/uploads/Friday-the-13th-TV-Series-in-development-The-CW.jpg</fanart>
+</item>
+
+<item>
+<title>Friday the 13th (2009) 1080p-HD</title>
+<meta>
+<content>movie</content>
+<imdb>tt0758746</imdb>
+<title>Friday the 13th (2009) 1080p-HD</title>
+<year>2009</year>
+</meta>
+<link>
+<sublink>https://uptostream.com/hr4ss25iqlyk</sublink>
+</link>
+<thumbnail>https://ianmannus.files.wordpress.com/2015/03/fridaythe13thbd2d.jpg</thumbnail>
+<fanart>http://screenrant.com/wp-content/uploads/Friday-the-13th-TV-Series-in-development-The-CW.jpg</fanart>
+</item>
+
+
+
+**************************************************************************************************************
+
+<channels>
+<channel>
+<name>[B][COLOR blue]How To:[/COLOR] [COLOR yellow]Kodi[/COLOR][/B]</name>
+<thumbnail>https://thestreammachine.000webhostapp.com/TSMVideos/icon.png</thumbnail>
+<fanart>https://thestreammachine.000webhostapp.com/TSMVideos/fanart.jpg</fanart>
+<externallink>https://thestreammachine.000webhostapp.com/TSMVideos/kodihowto.txt</externallink>
+</channel>
+
+<channel>
+<name>[B][COLOR blue]How To:[/COLOR] [COLOR yellow]Android[/COLOR][/B]</name>
+<thumbnail>https://thestreammachine.000webhostapp.com/TSMVideos/icon.png</thumbnail>
+<fanart>https://thestreammachine.000webhostapp.com/TSMVideos/fanart.jpg</fanart>
+<externallink>https://thestreammachine.000webhostapp.com/TSMVideos/androidhowto.txt</externallink>
+</channel>
+
+<channel>
+<name>[B][COLOR red]Movies:[/COLOR] [COLOR yellow]Action[/COLOR][/B]</name>
+<thumbnail>https://thestreammachine.000webhostapp.com/TSMVideos/icon.png</thumbnail>
+<fanart>https://thestreammachine.000webhostapp.com/TSMVideos/fanart.jpg</fanart>
+<externallink>https://thestreammachine.000webhostapp.com/TSMVideos/movies-action.txt</externallink>
+</channel>
+
+<channel>
+<name>[B][COLOR red]Movies:[/COLOR] [COLOR yellow]Comedy[/COLOR][/B]</name>
+<thumbnail>https://thestreammachine.000webhostapp.com/TSMVideos/icon.png</thumbnail>
+<fanart>https://thestreammachine.000webhostapp.com/TSMVideos/fanart.jpg</fanart>
+<externallink>https://thestreammachine.000webhostapp.com/TSMVideos/movies-comedy.txt</externallink>
+</channel>
+
+<channel>
+<name>[B][COLOR red]Movies:[/COLOR] [COLOR yellow]Gangster[/COLOR][/B]</name>
+<thumbnail>https://thestreammachine.000webhostapp.com/TSMVideos/icon.png</thumbnail>
+<fanart>https://thestreammachine.000webhostapp.com/TSMVideos/fanart.jpg</fanart>
+<externallink>https://thestreammachine.000webhostapp.com/TSMVideos/movies-gangster.txt</externallink>
+</channel>
+
+<channel>
+<name>[B][COLOR red]Test:[/COLOR] [COLOR yellow]Test[/COLOR][/B]</name>
+<thumbnail>https://thestreammachine.000webhostapp.com/TSMVideos/icon.png</thumbnail>
+<fanart>https://thestreammachine.000webhostapp.com/TSMVideos/fanart.jpg</fanart>
+<externallink>https://thestreammachine.000webhostapp.com/TSMVideos/test.txt</externallink>
+</channel>
+
+</channels>
+
+
+
+
+

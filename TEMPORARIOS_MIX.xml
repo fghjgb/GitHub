@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR blue] LISTAS IPTV [COLOR gold]By shani [/COLOR][COLOR red]•[/COLOR][/B]</title>
+<link>http://fui.me</link>
+<jsonrpc>plugin://plugin.video.ZemTV-shani/?mode=55&amp;name=INSPIRATION&amp;url=sss</jsonrpc>
+<thumbnail>http://upimagens.com/di/WOF3/listasiptv1.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+
+
+=====================================================================================================================
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR blue] LISTAS MIX [COLOR gold]#2 [/COLOR][/B]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+    <title>[B][COLOR red]•[/COLOR][COLOR lavenderblush] [makelist.param2][/COLOR][/B]</title>
+   <link>NA</link>
+   <externallink>[makelist.param1][DE]$$TSDOWNLOADER$$</externallink>
+<thumbnail>http://upimagens.com/di/WOF3/listasiptv1.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart>
+]]></listrepeat>
+<expres>>(http:\/\/(.*?)\/.*?)<</expres>
+<page>http://www.m3uliste.pw/</page>
+<referer></referer>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>http://upimagens.com/di/WOF3/listasiptv1.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart>
+</item>
+
+
+
+ 
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR blue] LISTAS MIX [COLOR gold]#3 [/COLOR][/B]</title>
+<link>$doregex[makelist]</link>
+
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+     <title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR blue]  [makelist.param2][/COLOR][/B]</title>
+    <link>$doregex[getlink]</link>
+]]></listrepeat>
+<expres><![CDATA[<a href='(.*?)'>(Daily.*?)<\/a>]]></expres>
+<page>http://iptvsatlinks.blogspot.pt/search?max-results=40</page>
+<cookieJar></cookieJar>
+<thumbnail>http://upimagens.com/di/WOF3/listasiptv1.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart>
+</regex>
+
+<regex>
+<name>getlink</name>
+<listrepeat><![CDATA[
+     <title>[B][COLOR red]•[/COLOR][COLOR lavenderblush] [getlink.param1][/COLOR][/B]</title>
+    <link>_</link>
+    <externallink>[getlink.param1][DE]$$TSDOWNLOADER$$</externallink>
+    <thumbnail></thumbnail>
+]]></listrepeat>
+    <expres><![CDATA[(http:\/\/.*?get.php.*?type=m3u)]]></expres>
+<page>[makelist.param1]</page>
+<referer></referer>
+<cookieJar></cookieJar>
+
+</regex>
+</item>
+
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR blue] LISTAS MIX [COLOR gold]#4 [/COLOR][/B]</title>
+<link>$doregex[makelist2]</link>
+
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR blue]  [makelist2.param2][/COLOR][/B]</title>
+<link>$doregex[makelist]</link>
+<thumbnail>http://upimagens.com/di/WOF3/listasiptv1.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart>
+ ]]></listrepeat>
+<expres><![CDATA[post-title entry-title[\w\W\s]{0,23}href='(.*?)'>(.*?)<]]></expres>
+<page>https://iptvlinkusa.blogspot.ro/search?max-results=40</page>
+</regex>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+ <title>[B][COLOR red]•[/COLOR][COLOR lavenderblush] [makelist.param1][/COLOR][/B]</title>
+ <link>plugin://plugin.video.f4mTester/?url=[makelist.param2]&streamtype=TSDOWNLOADER&maxbitrate=-1&proxy=None&name=[COLOR lawngreen]INSPIR@TION IPTV[/COLOR] [makelist.param1]</link>
+ ]]></listrepeat>
+<expres>#EXTINF:-1,(.+?)<.+?(http.+?\.ts)</expres>
+<page>[makelist2.param1]</page>
+<agent>Kodi/15.2 (Windows NT 6.1) App_Bitness/32 Version/15.2-Git:20151019-02e7013</agent>
+</regex>
+<thumbnail>http://upimagens.com/di/WOF3/listasiptv1.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart>
+</item>
+
+
+ 
+
+ 
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR blue] LISTAS MIX [COLOR gold]#5 [/COLOR][/B]</title>
+<link>$doregex[makelist2]</link>
+ 
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR blue] [makelist2.param2][/COLOR][/B]</title>
+<link>$doregex[makelist]</link>
+<thumbnail>http://upimagens.com/di/WOF3/listasiptv1.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart>
+]]></listrepeat>
+<expres><![CDATA[post-title entry-title[\w\W\s]{0,23}href='(.*?)'>(.*?)<]]></expres>
+<page>http://iptvsatlinks.blogspot.mx/search?max-results=40</page>
+</regex>
+ 
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[B][COLOR red]•[/COLOR][COLOR lavenderblush] [makelist.param1][/COLOR][/B]</title>
+<link>plugin://plugin.video.f4mTester/?url=[makelist.param2]&streamtype=TSDOWNLOADER&maxbitrate=-1&proxy=None&name=[COLOR white]INSPIR@TION[/COLOR] [makelist.param1]  </link>
+
+]]></listrepeat>
+<expres><![CDATA[EXTINF[\w\W\s]{0,5},(.*?)<[\w\W\s]{0,5}>(http.*?ts)<]]></expres>
+<page>[makelist2.param1]</page>
+<agent>Kodi/15.2 (Windows NT 6.1) App_Bitness/32 Version/15.2-Git:20151019-02e7013</agent>
+</regex>
+<thumbnail>http://upimagens.com/di/WOF3/listasiptv1.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart>
+</item>
+
+
+
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR blue] LISTAS MIX [COLOR gold]#6 [/COLOR][/B]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[B][COLOR red]•[/COLOR][COLOR aquamarine] [makelist.param2][/COLOR][/B]</title>
+  <link>$doregex[makelist2]</link>
+  <thumbnail>http://upimagens.com/di/WOF3/listasiptv1.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart>
+]]></listrepeat>
+<expres><![CDATA[href="([^"]+)">(.*?)</a]]></expres>
+<page>http://www.iptvultra.com/</page>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+  <title>[B][COLOR red]•[/COLOR][COLOR lavenderblush] [makelist2.param1][/COLOR][/B]</title>
+  <link>plugin://plugin.video.f4mTester/?url=$doregex[getUrl]&amp;streamtype=TSDOWNLOADER&amp;name=[makelist2.param1]&amp;maxbitrate=0&amp;Buffer=20971520</link>
+  <thumbnail>http://upimagens.com/di/WOF3/listasiptv1.png</thumbnail>
+  <fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart>
+]]></listrepeat>
+<expres><![CDATA["\d+.{3}(.*?)\s\[.+?\](http.*?)"]]></expres>
+<page>[makelist.param1]?get=download_m3u8</page>
+
+</regex>
+<regex>
+<name>getUrl</name>
+<expres>$pyFunction:urllib.quote_plus('[makelist2.param2]|User-Agent=VLC/2.2.1 LibVLC/2.2.17&amp;Icy-MetaData=1')</expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>http://upimagens.com/di/WOF3/listasiptv1.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart>
+</item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inspi[я]ation Links © 2017 All rights reserved

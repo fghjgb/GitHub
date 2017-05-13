@@ -1,0 +1,2717 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+
+
+
+
+
+<item>
+<title>[COLOR white][B][COLOR red]•[/COLOR] POR[COLOR blue][COLOR red]"[/COLOR]TU[COLOR red]"[/COLOR][/COLOR]GAL [COLOR red] + MIX [COLOR white][I](thx otários) :D[/B][/I][/COLOR]</title>
+<link>$doregex[makelist2]</link>
+
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+ <title>[COLOR white][B][COLOR red]•[/COLOR] Portugal[/B][/COLOR][COLOR lightgreen] [makelist2.param1][/COLOR] </title>
+ <link>$doregex[makelist]</link>
+<thumbnail>https://upimagens.com/di/SR8F/inspirationlivetv.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart>
+ ]]></listrepeat>
+<expres>Server:"(.*?)" URL="(.*?)"; regex"(.*?)"</expres>
+<page>https://pastebin.com/raw/DEZb6h01</page>
+<agent>Kodi/15.2 (Windows NT 6.1) App_Bitness/32 Version/15.2-Git:20151019-02e7013</agent>
+</regex>
+
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+ <title>[COLOR red]•[/COLOR] [COLOR white][makelist.param1][/COLOR]</title>
+ <link>plugin://plugin.video.f4mTester/?url=[makelist.param2]&amp;streamtype=TSDOWNLOADER&amp;maxbitrate=0&amp;proxy=None&amp;name=[COLOR lightblue]Inspir@tion [/COLOR] [makelist.param1]</link>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart>
+ <thumbnail>https://upimagens.com/di/SR8F/inspirationlivetv.png</thumbnail>
+ ]]></listrepeat>
+<expres>#EXTINF:-1,[makelist2.param3](.*?)\n(.*)</expres>
+<page>[makelist2.param2]</page>
+<agent>Kodi/15.2 (Windows NT 6.1) App_Bitness/32 Version/15.2-Git:20151019-02e7013</agent>
+</regex>
+<thumbnail>https://upimagens.com/di/SR8F/inspirationlivetv.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+
+<item>
+<title>[B][COLOR green]•[/COLOR][COLOR darkorange]•[/COLOR][COLOR navy]•[/COLOR][COLOR lavenderblush] Sp[COLOR gold]o[/COLOR]rt TV [COLOR gold]2[/B][/COLOR][COLOR springgreen] (f4m|Plexus) [/COLOR]</title>
+
+<link>plugin://plugin.video.f4mTester/?streamtype=TSDOWNLOADER;name=[COLOR gold]Inspir[COLOR lime]@[/COLOR]tion[/COLOR]&amp;url=http://149.202.72.15:8000/live/tavares/tavares/1038.ts</link>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLSRETRY;name=[COLOR gold]Inspir[COLOR lime]@[/COLOR]tion[/COLOR]&amp;url=http://iptvsensation.ddns.net:6500/live/James1/zkdZbEUp2X/8470.m3u8</link>
+<link>plugin://plugin.video.f4mTester/?streamtype=TSDOWNLOADER;name=[COLOR gold]Inspir[COLOR lime]@[/COLOR]tion[/COLOR]&amp;url=http://151.80.35.29:25461/live/portugal/portugal/438.ts</link>
+
+<link>plugin://program.plexus/?url=&amp;mode=1&amp;name=Sporttv2</link>
+
+<thumbnail>https://sck.pm/58</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+******************************************************************************************
+
+<item>
+<title>[B][COLOR green]•[/COLOR][COLOR darkorange]•[/COLOR][COLOR navy]•[/COLOR][COLOR lavenderblush] AREN[COLOR red]AV[/COLOR]ISION [COLOR darkorange]AGENDA[COLOR magenta] (Russos) [/COLOR][/B]</title> 
+<link>http://fui.me</link>
+<jsonrpc>plugin://plugin.video.p2psport/?mode=livefootballvideo.com</jsonrpc>
+<thumbnail>http://arenavision.in/sites/default/files/FAVICON_AV2015.png</thumbnail>
+<fanart>http://s15.postimg.org/pyrcvek2z/PLEXUS.jpg</fanart></item>
+
+
+
+<item>
+<title> CANAIS BR MUITO BOM</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold] [makelist.param1][/COLOR]</title>
+  <link>$doregex[getUrl]</link>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import requests, re, urllib2
+def GetLSProData(page_data,Cookie_Jar,m):
+  source = re.findall('Pipoca(?s)(.*?)</body', page_data)[0].replace('amp;','')
+  return re.findall('([^>]+)\s=\s(h.*?)<', source)
+]]></expres>
+<page>http://ekostreams.co/</page>
+<agent>Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.04</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import requests, re, urllib2
+def GetLSProData(page_data,Cookie_Jar,m):
+  html = re.findall('src="(.*embed/.*?)"', page_data)[0]
+  source = requests.get(html, headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.04', 'Referer': '[makelist.param2]', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'}).text
+  link = re.findall('"(h.*?m3u8)"', source)[0]
+  location = urllib2.urlopen(link)
+  return location.geturl()
+]]></expres>
+]]></expres>
+<page>[makelist.param2]</page>
+<referer>http://ekostreams.co/</referer>
+<agent>Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.04</agent>
+<cookieJar></cookieJar>
+</regex>
+
+
+
+<item>
+<title>|| UK TV ||</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[COLOR yellow][makelist.param1][/COLOR]</title>
+<link>$doregex[makelist2]</link>
+<thumbnail>[makelist.param2]</thumbnail>
+<fanart>[makelist.param2]</fanart>
+]]></listrepeat>
+<expres>id="channel_name".*?href="http://uktv.robssatellitetv.com/watch-uk-tv-online/(.*?).php">.+?src="(.*?)"</expres>
+<page>http://uktv.robssatellitetv.com/</page>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+<title>[COLOR blue][makelist.param1][/COLOR]</title>
+<link>[makelist2.param1]</link>
+<thumbnail>[makelist.param2]</thumbnail>
+<fanart>[makelist.param2]</fanart>
+]]></listrepeat>
+<expres>src: "(.*?)"</expres>
+<page>http://uktv.robssatellitetv.com/watch-uk-tv-online/[makelist.param1].php</page>
+</regex>
+</item>
+
+<item>
+<title>UK TV</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[makelist.param1]</title>
+<link>$doregex[makelist2]</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+]]></listrepeat>
+<expres>id="channel_name".+?href="http://uktv.robssatellitetv.com/watch-uk-tv-online/(.+?).php"</expres>
+<page>http://uktv.robssatellitetv.com/</page>
+</regex>
+
+
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+<title>Click to play</title>
+<link>[makelist2.param1]</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+]]></listrepeat>
+<expres>src: "(.+?)"</expres>
+<page>http://uktv.robssatellitetv.com/watch-uk-tv-online/[makelist.param1].php</page>
+</regex>
+
+</item>
+
+
+<item>
+<title>[COLOR gold][B][COLOR red]•[/COLOR] POR[COLOR lime][COLOR red]"[/COLOR]TU[COLOR red]"[/COLOR][/COLOR]GAL [/B][COLOR white][I]Lista Completa[/I][/COLOR]</title>
+<link>http://fui.me</link>
+<externallink>https://pastebin.com/raw/CJDNwDvE</externallink>
+<thumbnail>https://upimagens.com/di/AXKG/logo.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+
+
+
+<item>
+<title>[COLOR gold][B][COLOR red]•[/COLOR] Br[COLOR lime][COLOR red]"[/COLOR]@[COLOR red]"[/COLOR][/COLOR]sil [/B][COLOR white][I]Lista Completa[/I][/COLOR]</title>
+<link>$doregex[makelist2]</link>
+
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+ <title>[COLOR gold][B][COLOR red]•[/COLOR] Br[COLOR lime]a[/COLOR]sil [/B][COLOR navy]Channels[/COLOR][COLOR lightgreen] [makelist2.param1][/COLOR] </title>
+ <link>$doregex[makelist]</link>
+<thumbnail>https://upimagens.com/di/XC8Q/madeinbr.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart>
+ ]]></listrepeat>
+<expres>Server:"(.*?)" URL="(.*?)"; regex"(.*?)"</expres>
+<page>&#104;&#116;&#116;&#112;&#115;&#58;&#47;&#47;&#112;&#97;&#115;&#116;&#101;&#98;&#105;&#110;&#46;&#99;&#111;&#109;&#47;&#114;&#97;&#119;&#47;&#48;&#81;&#76;&#116;&#86;&#115;&#83;&#99;</page>
+<agent>Kodi/15.2 (Windows NT 6.1) App_Bitness/32 Version/15.2-Git:20151019-02e7013</agent>
+</regex>
+
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+ <title>[COLOR red]•[/COLOR] [COLOR white][makelist.param1][/COLOR]</title>
+ <link>plugin://plugin.video.f4mTester/?url=[makelist.param2]&amp;streamtype=TSDOWNLOADER&amp;maxbitrate=0&amp;proxy=None&amp;name=[COLOR lightblue]Inspir@tion [/COLOR] [makelist.param1]</link>
+<thumbnail>https://upimagens.com/di/XC8Q/madeinbr.png</thumbnail>
+ ]]></listrepeat>
+<expres>#EXTINF:-1,[makelist2.param3](.*?)\n(.*)</expres>
+<page>[makelist2.param2]</page>
+<agent>Kodi/15.2 (Windows NT 6.1) App_Bitness/32 Version/15.2-Git:20151019-02e7013</agent>
+</regex>
+<thumbnail>https://upimagens.com/di/XC8Q/madeinbr.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+
+=====================================================================================================================
+<item>
+<title>Streamango test - 24hr Legacy</title>
+<link>https://$doregex[url]|User-Agent=Mozilla/5.0 (Linux; Android 5.1.1; Nexus 6 Build/LYZ28E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36/</link>
+<regex>
+<name>url</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'http://streamango.com/embed/scoalsomlsmplccd/24_Legacy_S01E12_720p_HDTV_x264-AVS_mkv'):
+ import requests, re
+ ua = 'Mozilla/5.0 (Linux; Android 5.1.1; Nexus 6 Build/LYZ28E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36/'
+ headers = {'User-Agent': ua, 'Accept': 'application/vnd.apple.mpegurl, text/javascript, */*; q=0.01', 'Connection': 'keep-alive'}
+ source = requests.get(url, headers = headers).text
+ return re.findall('src:"\/\/(.*?)"', source)[0].replace('\/','/')
+]]></expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail></thumbnail>
+<fanart></fanart>               
+</item>
+
+   <item>
+    <title>[COLOR cyan]Portugal - dailyiptvlist.com[/COLOR]</title>
+    <link>$doregex[leg]</link>
+ 
+    <regex>
+      <name>leg</name>
+      <listrepeat><![CDATA[
+            <title>[leg.param2]</title>
+            <link>$doregex[list]</link>
+    ]]></listrepeat>
+    <expres><![CDATA[(?s)<h2 class="post-title".+?href="https(.+?)">(.+?)</a>]]></expres>
+    <page>http://www.dailyiptvlist.com/europe/portugal/</page>
+    </regex>
+ 
+    <regex>
+    <name>list</name>
+    <listrepeat><![CDATA[
+    <title>[list.param2]</title>
+    <link>ignoreme</link>
+    <externallink>https://[list.param1]$$TSDOWNLOADER$$</externallink>
+    ]]></listrepeat>
+    <expres><![CDATA[<blockquote><p><a href="https://(.+?)">(.+?)</a></p></blockquote>]]></expres>
+    <page>http[leg.param1]</page>
+    </regex>
+ 
+    </item>
+=====================================================================================================================
+
+
+
+
+
+
+<item>
+<title>[B][COLOR navy]•[/COLOR][COLOR lavenderblush] FONTE DE LISTA DESPORTO: Bein Sport [COLOR navy][/COLOR][/COLOR][/B]</title>
+
+<link>$doregex[GetUrl]</link>
+
+<regex>
+<name>GetUrl</name>
+<expres>var Link1 = "(.*?)"</expres>
+<page>http://www.futbolmacizle.com/49495454_tottenham-stoke-city</page>
+<referer>http://www.futbolmacizle.com/</referer>
+<thumbnail>https://can.connect.beinsports.com/wp-content/themes/bein/dist/images/logo_new_header.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart>
+</regex>
+</item>
+
+<item>
+<title>[B][COLOR navy]•[/COLOR][COLOR lavenderblush] Movistar [COLOR darkorange]D[/COLOR]eporte [COLOR navy]1[/COLOR][/B][COLOR springgreen] (sportdevil) [/COLOR]</title>
+
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://lacasadeltikitaka.me/directo/canal2.php</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://lacasadeltikitaka.me/directo/canal1.php</link>
+
+<thumbnail>http://www.thelogodb.com/images/media/logo/syysww1474680393.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+
+
+<item>
+<title>soccerstreams.net regex</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[COLOR orangered][makelist.param3][/COLOR] [COLOR gold]vs[/COLOR] [COLOR orangered][makelist.param2][/COLOR] [COLOR snow][makelist.param1][/COLOR]</title>
+<link>$doregex[makelist2]</link>
+<thumbnail></thumbnail>
+<referer>https://soccerstreams.net/</referer>
+]]></listrepeat>
+<expres><![CDATA[.*<img src=".*" alt="(.*?)" .*\n.*\n.*\n.*\n.*\n.*\n.*alt="(.*?)" .*\n.*\n.*\n.*\n.*\n.*\n.*alt="(.*?)" .*\n.*\n.*\n.*\n.*\n.*\n.*href="(https:\/\/soccerstreams.net\/streams\/.*?)"]]></expres>
+<page>https://soccerstreams.net/</page>
+<cookieJar></cookieJar>
+</regex>
+
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+<title>[COLOR orangered][makelist.param3][/COLOR] [COLOR gold][makelist.param2][/COLOR] [COLOR snow][makelist.param1][/COLOR]</title>
+<sportsdevil>[makelist2.param1]</sportsdevil>
+<thumbnail></thumbnail>
+<referer>https://soccerstreams.net/</referer>
+]]></listrepeat>
+<expres><![CDATA[>*data-href="(.*)" data-stream-id=".*" data-type="HTTP" data-quality="(.*)" data-language="(.*)" data-mobile=".*">]]></expres>
+<page>[makelist.param4]</page>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+
+
+<item>
+<title>[B][COLOR springgreen]•[/COLOR][COLOR navy]•[/COLOR][COLOR red]•[/COLOR][COLOR lavenderblush] Chefe Tv [COLOR red]•[/COLOR][COLOR navy] [/COLOR][/B]</title> 
+<utube>vA4wpWUwMTo</utube>
+<thumbnail>https://upimagens.com/di/B2RK/200px-LOGOCHEFTV.jpg</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+
+<item>
+<title>[B][COLOR navy]•[/COLOR][COLOR red] NBA [COLOR lavenderblush]USA[/COLOR][/B][COLOR springgreen]  [/COLOR]</title>
+<link>$doregex[link]</link>
+
+<regex>
+<name>link</name>
+<expres>src: "(.*?nba.*?)"</expres>
+<page>http://yoursportsinhd.com/nbatv/</page>
+<agent>Mozilla/5.0 (Linux; Android 4.1.1; Nexus 7 Build/JRO03D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Safari/535.19</agent>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>https://www.thelogodb.com/images/media/logo/vvvvtw1465807769.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+
+<item>
+<title>BBC ONE</title>
+<link>$doregex[getM3U8]</link>
+<regex>
+<name>getM3U8</name>
+<expres>"url":"(.*?)"</expres>
+<page>http://www.filmon.com/api-v2/channel/14</page>
+<referer>http://www.filmon.com/tv/channel/export?channel_id=14&</referer>
+<agent>Mozilla/5.0 (Windows NT 6.3; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0</agent>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail></thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR snow]acestream correcto[/COLOR]</title>
+<link>plugin://program.plexus/?url=acestream://c0d019e3872d5b0c136e1a23023c3ed794c4160a&amp;mode=1&amp;name=acestream</link>
+</item>
+
+=====================================================================================================================
+
+<item>
+<title>[COLOR lime] •[/COLOR][COLOR red] NOVELAS #**Test**# [/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[COLOR blue][makelist.param3][/COLOR]</title>
+<link>$doregex[makelist2]</link>
+<thumbnail>NA</thumbnail>
+<fanart>http://oi68.tinypic.com/fnrak4.jpg</fanart>
+]]></listrepeat>
+<expres><![CDATA[a href="(.*?)" title="(.*?)">(En.*?)<]]></expres>
+<page>http://www.tusnovelas.net/ver-telenovela/enamorandome-de-ramon</page>
+<cookieJar></cookieJar>
+</regex>
+
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+<title>[COLOR blue][makelist.param3][/COLOR]</title>
+<link>$doregex[getRTPM] playpath=$doregex[path] swfUrl=http://powvideo.net/player6/jwplayer.flash.swf live=1 timeout=15 pageUrl=[makelist2.param1]</link>
+<thumbnail>NA</thumbnail>
+<fanart>http://oi68.tinypic.com/fnrak4.jpg</fanart>
+]]></listrepeat>
+<expres><![CDATA[<iframe src="(.*gamo.*?)"\W]]></expres>
+<page>http://www.tusnovelas.net[makelist.param1]</page>
+<agent>Mozilla/5.0 (Windows NT 6.1; WOW64; rv:19.0) Gecko/20100101 Firefox/19.0</agent>
+<cookieJar></cookieJar>
+</regex>
+
+<regex>
+<name>getRTPM</name>
+<expres><![CDATA[file: "(rtmp.*?h=.*?)\/]]></expres>
+<page>[makelist2.param1]</page>
+<agent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36</agent>
+<cookieJar></cookieJar>
+<connection>keep-alive</connection>
+<includeheaders/>
+</regex>
+
+<regex>
+<name>path</name>
+<expres><![CDATA[file: "rtmp.*?h=.*?\/(.*?)"\W]]></expres>
+<page>[makelist2.param1]</page>
+<agent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36</agent>
+<cookieJar></cookieJar>
+<connection>keep-alive</connection>
+<includeheaders/>
+</regex>
+<thumbnail>http://oi68.tinypic.com/fnrak4.jpg</thumbnail>
+</item>
+
+
+
+<item>
+<title>[B][COLOR green]•[/COLOR][COLOR darkorange]•[/COLOR][COLOR navy]•[/COLOR][COLOR navy] Sport TV [COLOR aquamarine]1[/B][/COLOR][COLOR springgreen]  [/COLOR]</title>
+<sportsdevil>http://www.liveflashplayer.net/membedplayer/slb97346/1/555/442</sportsdevil><referer>http://www.liveflashpublisher.com:1935/loadbalancer</referer>
+<thumbnail>https://sck.pm/Hw</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+=====================================================================================================================
+
+
+
+=====================================================================================================================
+
+
+
+<item>
+<title>[B][COLOR green]•[/COLOR][COLOR darkorange]•[/COLOR][COLOR navy]•[/COLOR][COLOR yellowgreen][COLOR navy] Sport TV [COLOR aquamarine]2[/B][/COLOR][COLOR springgreen]  [/COLOR]</title>
+<link>$doregex[getLink]|Cookie=$get_cookies$&amp;User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0</link>
+<regex>
+<name>getLink</name>
+<expres>videoLink = '(.*?)'</expres>
+<page>http://www.livesport.pw/Sport2PT.html</page>
+<agent>Mozilla/5.0 (Windows NT 6.3; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0</agent>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>https://sck.pm/58</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+=====================================================================================================================
+
+
+
+
+
+
+
+
+<item>    
+<title>[COLOR lime][B][COLOR red]•[/COLOR] Gobble Sports [COLOR red]•[/COLOR][COLOR white]  [/COLOR][/B]</title>
+<link>http://fui.me</link>
+<jsonrpc>plugin://plugin.video.gobble/?url=http%3A%2F%2F51.15.37.118%3A8081%2Fcdn%2Fptvsportssd%2Fplaylist.m3u8&mode=2&name=PTV+SPORTS+SD&iconimage=http%3A%2F%2Fswiftstreamz.com%2FSwiftStream%2Fimages%2Fthumbs%2F68635_ptvsportssd.jpg%7CUser-Agent%3DDalvik%2F2.1.0+%28Linux%3B+U%3B+Android+6.0%3B+HTC6525LVW+Build%2FMRA58K%29%26Host%3Dswiftstreamz.com%26Accept-Encoding%3Dgzip%26Connection%3DKeep-Alive</jsonrpc>
+<thumbnail>http://i.imgur.com/VtEJs7e.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+<item>
+<title>[B][COLOR navy]•[/COLOR][COLOR lavenderblush] Canal + Sport [COLOR navy]*Test[/COLOR] [/COLOR][/B]</title>
+<link>$doregex[url]|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:49.0) Gecko/20100101 Firefox/49.0</link>
+<regex>
+<name>url</name>
+<expres>file: '(.*?)'</expres>
+<page>http://www.urhd.tv/canal-sport/embed</page>
+<referer>http://www.urhd.tv/fr-canalsporthd</referer>
+<agent>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:49.0) Gecko/20100101 Firefox/49.0</agent>
+</regex>        
+<thumbnail>https://www.thelogodb.com/images/media/logo/utquqs1472570910.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart>
+</item>
+
+
+<item>
+<title>[B][COLOR navy]•[/COLOR][COLOR lavenderblush] Foot+ Sport [COLOR navy]*Test[/COLOR] [/COLOR][/B]</title>
+<link>$doregex[url]|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:49.0) Gecko/20100101 Firefox/49.0</link>
+<regex>
+<name>url</name>
+<expres>file: '(.*?)'</expres>
+<page>http://www.urhd.tv/foot-24-24/embed</page>
+<referer>http://www.urhd.tv/fr-canalsporthd</referer>
+<agent>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:49.0) Gecko/20100101 Firefox/49.0</agent>
+</regex>        
+<thumbnail>https://www.thelogodb.com/images/media/logo/utquqs1472570910.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart>
+</item>
+
+
+
+#############################################################################################################
+
+
+
+<item>
+<title>[B][COLOR aquamarine]•[/COLOR] [COLOR red]|[COLOR aquamarine]AV[/COLOR]|[/COLOR] [COLOR aquamarine]1[/B][/COLOR]</title>
+<link>plugin://plugin.video.p2p-streams/?url=$doregex[hash]&amp;mode=1&amp;name=Inspir@tion AV</link>
+<regex>
+<name>hash</name>
+<expres>this.loadPlayer\("(.*?)"</expres>
+<page>http://www.arenavision.in/av1</page>
+<referer>http://www.arenavision.in</referer>
+<setcookie>beget=begetok</setcookie>
+<name>Inspir@tion</name>
+<link>plugin://program.plexus/?url=$doregex[hash]&amp;mode=1&amp;name=Inspir@tion AV</link>
+<regex>
+<name>hash</name>
+<expres>this.loadPlayer\("(.*?)"</expres>
+<page>http://www.arenavision.in/av1</page>
+<referer>http://www.arenavision.in</referer>
+<setcookie>beget=begetok</setcookie>
+<name>Inspir@tion</name>
+  <thumbnail>http://s4.postimg.org/x4998hvkt/liganos.png</thumbnail>
+  <fanart>http://s15.postimg.org/pyrcvek2z/PLEXUS.jpg</fanart>
+</regex>
+</item>
+
+
+=====================================================================================================================
+
+
+<item>
+<title>[B][COLOR aquamarine]•[/COLOR] [COLOR red]|[COLOR aquamarine]AV[/COLOR]|[/COLOR] [COLOR aquamarine]9[/B][/COLOR]</title>
+<link>plugin://plugin.video.p2p-streams/?url=$doregex[hash]&amp;mode=1&amp;name=Inspir@tion AV</link>
+<regex>
+<name>hash</name>
+<expres>this.loadPlayer\("(.*?)"</expres>
+<page>http://www.arenavision.in/av9</page>
+<referer>http://www.arenavision.in</referer>
+<setcookie>beget=begetok</setcookie>
+<name>Inspir@tion</name>
+<link>plugin://program.plexus/?url=$doregex[hash]&amp;mode=1&amp;name=Inspir@tion AV</link>
+<regex>
+<name>hash</name>
+<expres>this.loadPlayer\("(.*?)"</expres>
+<page>http://www.arenavision.in/av9</page>
+<referer>http://www.arenavision.in</referer>
+<setcookie>beget=begetok</setcookie>
+<name>Inspir@tion</name>
+  <thumbnail>http://s4.postimg.org/x4998hvkt/liganos.png</thumbnail>
+  <fanart>http://s15.postimg.org/pyrcvek2z/PLEXUS.jpg</fanart>
+</regex>
+</item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<item>
+<title>[COLOR lime] •[/COLOR][COLOR red] Bella [/COLOR]</title>
+<link>$doregex[server]</link>
+<regex><name>server</name>
+<listrepeat><![CDATA[
+<title>[COLOR deepskyblue]Bella[/COLOR] - [COLOR white][server.param1][/COLOR]</title>
+<link>$doregex[resolver]|User-Agent=Mozilla/5.0 (Windows NT 6.1; WOW64; rv:19.0) Gecko/20100101 Firefox/19.0&Referer=http://www.cinecalidad.com/</link>
+<thumbnail></thumbnail>
+]]></listrepeat>
+<expres><![CDATA[service=="Online(YourUpload|TheVideos.*?)"]]></expres>
+<page>http://www.cinecalidad.to/pelicula/belleza-inesperada-online-descarga/</page>
+<agent>Mozilla/5.0 (Windows NT 6.1; WOW64; rv:19.0) Gecko/20100101 Firefox/19.0</agent>
+<cookieJar></cookieJar></regex>
+<regex><name>resolver</name>
+<expres><![CDATA[#$pyFunction
+import re ,requests
+import urlresolver
+def parseint(string):
+    return int(''.join([x for x in string if x.isdigit()]))
+
+def GetLSProData(page_data,Cookie_Jar,m):
+  values = re.search(r'service=="Online[server.param1]"\)\{h=dec\("(.*?)"\)\+dec\("(.*?)"', page_data, re.DOTALL)
+  var1=values.group(1)
+  var2=values.group(2)
+  var1+=''.join(' ')
+  var1+=''.join(var2)
+  str=var1
+  d = "" ; str = str.split(" ")
+  i=0
+  for i in range(0,len(str)):
+  pp=(parseint(str[i])-7)
+  d+=''.join(unichr(pp))
+ 
+  streamLink = urlresolver.resolve(d)
+  return streamLink
+]]></expres>
+<page>http://www.cinecalidad.to/pelicula/belleza-inesperada-online-descarga/</page>
+<agent>Mozilla/5.0 (Windows NT 6.1; WOW64; rv:19.0) Gecko/20100101 Firefox/19.0</agent>
+<cookieJar></cookieJar></regex></regex>
+</item>
+
+
+
+
+**********************************FIMES*****************************************************
+
+
+
+
+<item>
+<title>FILMS BONS</title>
+<link>$doregex[makelist]</link>
+<thumbnail>http://streamay.bz/img/logo_z.png</thumbnail>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[makelist.param3]</title>
+  <info>[makelist.param4]</info>
+  <fanart></fanart>
+  <thumbnail>[makelist.param1]</thumbnail>
+  <link>$doregex[get_lien]</link>
+]]></listrepeat>
+<expres><![CDATA[qualitos".*\n.*src="(.*?)".alt[\w\W\s]*?href="(.*?)".+><span>(.*?)<[\w\W\s]*?"tt".*\n(.*)\n</p]]></expres>
+<page>http://streamay.bz/films</page>
+<agent>Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0</agent>
+</regex>
+<regex>
+<name>get_lien</name>
+<expres><![CDATA[#$pyFunction
+import re, requests, jscrypto, base64, binascii, json
+def GetLSProData(page_data,Cookie_Jar,m,url='[makelist.param2]'):
+  headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0','Referer':'[makelist.param2]','Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8','Accept-Language':'en-US,en;q=0.8'}
+  source=requests.get(url,headers=headers).text
+  link=re.findall('"(h.*uptobox.*?)"',source)[0].replace('uptobox','uptostream')
+  source=requests.get(link,headers=headers).text
+  return 'http://' + re.findall("'(.*?)'.+?type='video",source)[0]
+]]></expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+
+
+**********************************FUNCIONAM*****************************************************
+
+
+
+=====================================================================================================================
+<item> 
+<title>[B][COLOR red]••vv•• [COLOR gold]WORLD [COLOR blue]SPORT[/COLOR][COLOR red] ••vv••[/COLOR][/B]</title> 
+<link>http://fui.me</link>
+<thumbnail>https://upimagens.com/di/2QB1/logoinspiration.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+=====================================================================================================================
+
+
+
+
+
+
+
+
+
+**************************************************************************************************
+
+
+
+<item>
+<title>[B][COLOR red]•[/COLOR][COLOR lavenderblush] VARIOS [COLOR red]|[/COLOR] CHANNELS [COLOR red]Sport [/B][/COLOR]</title>
+<link>http://fonix.pt</link>
+<externallink>https://pastebin.com/raw/6FtRXuKY</externallink>
+<thumbnail>https://upimagens.com/di/VGKV/2g3nlAz.jpg</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+
+
+
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR yellowgreen][COLOR white] ESPANHA[/COLOR] Channels [COLOR red]•[/COLOR][COLOR white][/COLOR][/B]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title> [COLOR yellow][makelist.param2][/COLOR] [COLOR aquamarine]([makelist.param1])[/COLOR]</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;url=$doregex[url]&amp;name=[makelist.param2]</link>
+<thumbnail>http://upimagens.com/di/FGK8/madeinesp.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart>
+]]></listrepeat>
+<expres><![CDATA[title="(S.*\d+)".*?(\w[^"]+)\s\(.*\s(.*)\.[m|t]]]></expres>
+<page>http://www.exabytetv.info/ESP.m3u</page>
+</regex>
+<regex>
+<name>url</name>
+<expres>$pyFunction:urllib.quote_plus('[makelist.param3].m3u8|User-Agent=VLC/2.2.1 LibVLC/2.2.17&amp;Icy-MetaData=1')</expres>
+<page>http://www.exabytetv.info/ESP.m3u</page>
+<thumbnail>http://upimagens.com/di/FGK8/madeinesp.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart>
+</regex>
+</item>
+
+
+
+
+
+<item>
+<title>[B][COLOR red]•[/COLOR][COLOR aquamarine] AGENDA AREN[COLOR red]|AV|[/COLOR]ISION [COLOR red]#2[/B][COLOR magenta] (fuso +1Hora-Madrid)[/COLOR]</title> 
+<link>$doregex[makelist]</link>
+<thumbnail>http://arenavision.in/sites/default/files/FAVICON_AV2015.png</thumbnail>
+<fanart>http://s15.postimg.org/pyrcvek2z/PLEXUS.jpg</fanart>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[COLOR aquamarine] Agenda [makelist.param1][/COLOR]</title>
+<link>$doregex[makelist1]</link>
+<thumbnail>http://upimagens.com/di/2QB1/logoinspiration.png</thumbnail>
+<fanart>http://s15.postimg.org/pyrcvek2z/PLEXUS.jpg</fanart>
+]]></listrepeat>
+<expres><![CDATA[colspan="2".*?([0-9][0-9]\/[0-9][0-9]\/[0-9][0-9])(?s)(.*?)class="warning"]]></expres>
+<page>https://avezy.tk/</page>
+<thumbnail>http://arenavision.in/sites/default/files/FAVICON_AV2015.png</thumbnail>
+<fanart>http://s15.postimg.org/pyrcvek2z/PLEXUS.jpg</fanart>
+<agent></agent>
+</regex>
+<regex>
+<name>makelist1</name>
+<listrepeat><![CDATA[
+<title>[B][COLOR red]•[/COLOR][COLOR lavenderblush] [makelist1.param2][/COLOR] - [COLOR lightyellow][makelist1.param4]:[/COLOR] [COLOR lightgreen][makelist1.param5][/B][/COLOR]</title>
+<link>$doregex[makelist2]</link>
+<thumbnail>http://arenavision.in/sites/default/files/FAVICON_AV2015.png</thumbnail>
+<fanart>http://s15.postimg.org/pyrcvek2z/PLEXUS.jpg</fanart>
+<page>[makelist1.param3][makelist1.param3]</page>
+]]></listrepeat>
+<expres><![CDATA[align='center'>(.*?)<br>(.*?)<.*?src="(.*?)".*?[\w\W\s]{0,80}<td>(.*?)<br>.*?:(.*?)<(?s)(.*?class="")]]></expres>
+<page>[makelist.param2]</page>
+<agent></agent>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+<title>[COLOR skyblue][makelist2.param2][/COLOR]</title>
+<link>plugin://plugin.video.p2p-streams/?url=[makelist2.param1]&amp;mode=1&amp;name=Inspir@tion[makelist2.param2]</link>
+<link>plugin://program.plexus/?url=[makelist2.param1]&amp;mode=1&amp;name=Inspir@tion[makelist2.param2]</link>
+<thumbnail>http://arenavision.in/sites/default/files/FAVICON_AV2015.png</thumbnail>
+<fanart>http://s15.postimg.org/pyrcvek2z/PLEXUS.jpg</fanart>
+]]></listrepeat>
+<expres><![CDATA[acestream:\/\/(.*?)"(?s).*?>(AV.*?)<]]></expres>
+<page>$doregex[getace]</page>
+<agent></agent>
+</regex>
+<regex>
+<name>getace</name>
+<expres>[makelist1.param5](?s)(.*?class="")</expres>
+<page>https://avezy.tk/</page>
+<agent></agent>
+</regex>
+<thumbnail>http://arenavision.in/sites/default/files/FAVICON_AV2015.png</thumbnail>
+<fanart>http://s15.postimg.org/pyrcvek2z/PLEXUS.jpg</fanart></item>
+
+
+
+
+=====================================================================================================================
+
+
+
+
+<item>
+<title>[B][COLOR red]•[/COLOR][COLOR red] Sport TV [COLOR aquamarine]1 [COLOR gold]|[COLOR aquamarine] 5 [COLOR gold]Gold Sports[/B][/COLOR]</title>
+<link>http://fonix.pt</link>
+<externallink>https://pastebin.com/raw/6FtRXuKY</externallink>
+<thumbnail>https://www.thelogodb.com/images/media/logo/sqxxtw1470409111.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+
+
+<item>
+<title> [COLOR lime]•[/COLOR]    [COLOR lightyellow][B]Arena[COLOR yellow]vision[/B] [/COLOR][/COLOR][COLOR lightblue]ACESTREAM ARENAS / EVEZY.TK [/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<item><title>[COLOR lightyellow]Canal AV[makelist.param1]  [makelist.param2][/COLOR]   </title>
+<link>plugin://program.plexus/?url=[makelist.param3]&amp;mode=1&amp;name=LA FRONTERA+[makelist.param2]+Arenavision</link>
+</item>	
+]]></listrepeat>
+<expres><![CDATA[">AV(.*?)(ace)[\w\W\s]{0,20}acestream://(.*?)"]]></expres>
+<page>https://avezy.tk/</page>
+<Agent>Mozilla</Agent>http://redeneobux.com/wp-content/uploads/2
+</regex><thumbnail>https://2.bp.blogspot.com/-UlQv39UkJqM/WFb7SSd-HVI/AAAAAAAAA5g/eS8ir2X4CjEoxlHad9n88oO-jt-DdmmFgCLcB/s400/av.png</thumbnail>
+</item>
+
+
+
+<item>
+<title>YouTube channel ALL Playlists</title>
+<thumbnail></thumbnail>
+<fanart></fanart>
+<link>$doregex[get-url]</link>
+<regex>
+<name>get-url</name>
+<expres>$pyFunction:xbmc.executebuiltin('Container.Update(plugin://plugin.video.youtube/channel/UCSQOXnLQ6GTOjAyIFWIljCQ/playlists/)')</expres>-->
+<NOTPlayable>True</NOTPlayable>
+<page></page>
+</regex>
+<listrepeat></listrepeat>
+</item>
+
+
+
+
+<channel>
+<name>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR lime] Frenchi [COLOR red]•[/COLOR][COLOR white][/COLOR][/B]</name>
+<externallink>https://pastebin.com/raw/bikKQBRz</externallink>
+<thumbnail>http://upimagens.com/di/QWQC/icon.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart>
+</channel>
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR blue] ARENAVISION.IN [COLOR red]•[/COLOR][COLOR white] [Agenda][COLOR magenta] (fuso +1Hora-Madrid)[/COLOR][/B]</title> 
+
+<link>$doregex[makelist]</link>
+<thumbnail>http://arenavision.in/sites/default/files/FAVICON_AV2015.png</thumbnail>
+<fanart>http://s15.postimg.org/pyrcvek2z/PLEXUS.jpg</fanart>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+	<title>[COLOR red]• [/COLOR][COLOR lavenderblush]([makelist.param1]/17 @ [makelist.param2])[/COLOR] [COLOR lightblue][[makelist.param4]][/COLOR] [COLOR lightgreen][makelist.param5][/COLOR]</title>
+	<link>$doregex[av]</link>
+	<thumbnail>http://arenavision.in/sites/default/files/FAVICON_AV2015.png</thumbnail>
+    <fanart>http://s15.postimg.org/pyrcvek2z/PLEXUS.jpg</fanart>
+]]></listrepeat>
+<expres><![CDATA[190px">(.*?)\/2017<[\w\W\s]{0,45}182px">([0-9].{4}).*?CET<[\w\W\s]{0,45}188px">(.*?)<[\w\W\s]{0,45}283px">(.*?)<[\w\W\s]{0,45}685px">(.*?)<[\w\W\s]{0,45}317px">(?s)(.*?)<\/td>]]></expres>
+<page>http://arenavision.in/schedule</page>
+<Agent>Mozilla</Agent>
+</regex>
+<regex>
+<name>av</name>
+<listrepeat><![CDATA[
+	<title>[COLOR green]Arenavision AV [av.param1][/COLOR]</title>
+	<link>plugin://program.plexus/?url=$doregex[hash]&amp;mode=1&amp;name=INSPIR@TION  - Arenavision [av.param1]</link>
+    <link>plugin://plugin.video.p2p-streams/?url=$doregex[hash]&amp;mode=1&amp;name=INSPIR@TION  - Arenavision [av.param1]</link>
+    <thumbnail>http://arenavision.in/sites/default/files/FAVICON_AV2015.png</thumbnail>
+    <fanart>http://s15.postimg.org/pyrcvek2z/PLEXUS.jpg</fanart>
+]]></listrepeat>
+<expres><![CDATA[([0-9]{1,2})]]></expres>
+<page>[makelist.param6]</page>
+</regex>
+<regex>
+<name>hash</name>
+<expres><![CDATA[this.loadPlayer\("(.*?)"]]></expres>
+<page>http://www.arenavision.in/AV[av.param1]</page>
+<referer>http://www.arenavision.in</referer>
+<setcookie>beget=begetok</setcookie>
+</regex>
+<thumbnail>http://arenavision.in/sites/default/files/FAVICON_AV2015.png</thumbnail>
+<fanart>http://s15.postimg.org/pyrcvek2z/PLEXUS.jpg</fanart></item>
+
+
+
+
+
+
+
+<item>
+<title>Beinhd</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLS&amp;url=$doregex[getCoded]&amp;name=beinhd</link>
+<regex>
+ <name>wowzasessionid</name>
+ <expres>NAME=.*?SRC="(.*?)"</expres>
+ <page>http://embed.latino-webtv.com/bein.html</page>
+ <referer>http://embed.latino-webtv.com/</referer>
+ <agent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36</agent>
+<cookieJar></cookieJar>
+ </regex>
+
+<regex><name>m3u8</name>
+ <expres>file: "(.*?)"</expres>
+ <page><![CDATA[$doregex[wowzasessionid]]]></page>
+ <referer>http://embed.latino-webtv.com/</referer>
+ <agent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36</agent>
+<cookieJar></cookieJar>
+ </regex>
+<regex><name>getCoded</name>
+        <expres>$pyFunction:urllib.quote_plus('$doregex[m3u8]|Referer=http://latino-webtv.com/embed/canales.php?ch=beinhd%26name=bein%2sd=si%26&amp;X-Requested-With=ShockwaveFlash/24.0.0.186&amp;Accept: */*')</expres>
+        <page></page>
+</regex>
+ </item>
+ 
+ 
+ 
+
+<item>
+<title>[B][COLOR deepskyblue]Futebol Premium:  [/B][COLOR white][B]Inspiration[/B][/COLOR]</title
+<link>http://fui.me</link>
+<jsonrpc>plugin://plugin.video.inspiration/?url=https%3A%2F%2Fraw.githubusercontent.com%2Ffghjgb%2Ffghjk%2Fmaster%2FFUTEBOL_NAC%24%24LSProEncKey%3Dfenix%24%24&amp;mode=1&amp;name=%5BB%5D%5BCOLOR+green%5D%7C%5B%2FCOLOR%5D%5BCOLOR+gold%5D%7C%5B%2FCOLOR%5D%5BCOLOR+red%5D%7C%5B%2FCOLOR%5D+FUTBOL+PREMIUM+%5BCOLOR+green%5D%7C%5B%2FCOLOR%5D%5BCOLOR+gold%5D%7C%5B%2FCOLOR%5D%5BCOLOR+red%5D%7C%5B%2FCOLOR%5D+%5B%2FB%5D&amp;fanart=http%3A%2F%2Fs21.postimg.org%2F6ngdod4uv%2Ffanart.jpg</jsonrpc>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
+
+
+
+<item>
+<title>iptvsport</title>
+<link>$doregex[makelist]</link>
+<regex><name>makelist</name>
+<listrepeat><![CDATA[
+<title>[COLOR snow][makelist.param1][/COLOR]</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=TSDOWNLOADER&amp;url=[makelist.param2]</link>
+<referer></referer>
+<thumbnail></thumbnail>
+]]></listrepeat>
+<expres><![CDATA[(?s)#EXTINF:-1,(.*?)<.*?>(http.*?)<]]></expres>
+<page>http://www.elaissaoui.info/p/iptvsport.html</page>
+<cookieJar></cookieJar></regex>
+</item>
+
+
+
+
+
+<item><title>http://woop.io/sports/soccer/</title>
+<link>$doregex[makelist1]</link>
+<regex><name>makelist1</name>
+        <listrepeat><![CDATA[
+                <title>[makelist1.param1]-[COLOR snow][makelist1.param3][/COLOR]</title>
+                <link>$doregex[makelist2]</link>
+                <thumbnail></thumbnail>
+        ]]></listrepeat>
+        <expres><![CDATA[moment\("([^\+].*?)\+.*? href=".*?(/view[^"]+)">([^<]+)<]]></expres>
+        <page>http://woop.io/sports/soccer/</page>
+        <cookieJar></cookieJar>
+        <referer></referer>
+        </regex>
+<regex><name>makelist2</name>
+        <listrepeat><![CDATA[
+                <title>[COLOR snow][makelist2.param2][/COLOR]</title>
+                <sportsdevil>http://[makelist2.param2]</sportsdevil>
+                <referer></referer>
+                <thumbnail></thumbnail>
+        ]]></listrepeat>
+        <expres><![CDATA[Provider:([^<]+)<.*?href=.*?">([^<]+)<]]></expres>
+        <page>http://woop.io[makelist1.param2]</page>
+        <cookieJar></cookieJar>
+        </regex>
+</item>
+
+
+<item>
+<title>Dailymotion</title>
+<link>$doregex[GetPageUrl]</link>
+<regex>
+<name>GetPageUrl</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url='http://www.dailymotion.com/embed/video/x54qn0x'):
+    import urlresolver
+    u = urlresolver.resolve(url)
+    return u
+]]></expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+
+
+
+<item>
+<title>[B][COLOR blue]CLASSIC BOXING MATCHES[/COLOR][/B]</title>
+<link>ignorme</link>
+<jsonrpc>Plugin://plugin.video.youtube/playlist/PL1pGK7B2Dr1Mhoe35ekzS24XG_FiLTMce/?page=0</jsonrpc>
+<thumbnail>http://resources1.news.com.au/images/2011/11/06/1226186/882885-joe-frazier.jpg</thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<title>[B][COLOR blue]LIVE SPORT ON YOU TUBE HERE[/COLOR][/B]</title>
+<link>ignorme</link>
+<jsonrpc>Plugin://plugin.video.youtube/playlist/PL8fVUTBmJhHIegh7kgk6KsyLJ7miRBKpO/?page=0</jsonrpc>
+<thumbnail>https://yt3.ggpht.com/BQSIiLDxZiZpzR4C6pK-NKkKOv3fsPsWuKVJxpmYCnEASI8W5pglXP1vF30D98doHzsP_JwPLycrfd-FFnw=s100-nd-c-c0xffffffff-rj-k-no</thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<title>[B][COLORblue]PYRAMID IPTV[/B][/COLOR]</title>
+<premium>True</premium>
+<link>ignorme</link>
+<externallink>http://tombraiderbuilds.co.uk/addon/iptv/iptv1.txt</externallink>
+<thumbnail>http://tombraiderbuilds.co.uk/Icons/ukentertainment.jpg</thumbnail>
+<fanart></fanart>
+</item>
+
+
+<item>
+<title>Rojadirecta</title>
+<link>ignorme</link>
+<jsonrpc>plugin://plugin.video.SportsDevil/?item=url=livesports/rojadirecta.me.cfg&amp;mode=1</jsonrpc>
+<thumbnail></thumbnail>
+</item>
+
+
+
+
+
+<item>
+<title>[COLOR lawngreen][B]•[/B][/COLOR][COLOR white][B]iGuide.to[/B] [/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+ <title>[COLOR lawngreen][B]•[/B][/COLOR][COLOR white][B][makelist.param3] - [[makelist.param2]][/B][/COLOR]</title>
+<link>$doregex[getVipRacing]</link>
+<thumbnail>http://i.imgur.com/wSoQVEgl.jpg</thumbnail>
+            <regex>
+            <name>getVipRacing</name>
+            <expres>$pyFunction:vipracing.decrypt_vipracing('http://www.iguide.to/view/[makelist.param2]')</expres>
+            <page></page>
+            </regex>
+            <thumbnail></thumbnail>
+]]></listrepeat>
+<expres>images/channels/(.*?)_[\w\W\s]{0,55}www.iguide.to/view/(.*?)/(.*?)"</expres>
+<page>http://www.iguide.to/channels/?sort=2</page>
+<referer></referer>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>http://i.imgur.com/wSoQVEgl.jpg</thumbnail>
+</item>
+
+
+
+
+
+ <item>		
+<title>[COLOR lawngreen][B]•[/B][/COLOR][COLOR white][B]HDFREE[/B] [/COLOR]</title>
+<link>http://ignora.me</link>
+<jsonrpc>plugin://plugin.video.ZemTV-shani/?mode=77&amp;name=HDfree&amp;url=sss</jsonrpc>
+<thumbnail>https://i.ytimg.com/vi/wm3s8IGQC9Y/hqdefault.jpg</thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<title>[COLOR lawngreen][B]•[/B][/COLOR][COLOR white][B]MAMAHD[/B] [/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<item><title>[COLOR lime][makelist.param3][/COLOR]</title>
+<sportsdevil>http://mamahd.com/[makelist.param1]</sportsdevil>
+<thumbnail>[makelist.param2]</thumbnail>
+<fanart></fanart>
+<referer>http://mamahd.com/</referer>
+
+]]></listrepeat>
+<expres>href="http://mamahd.com/(.*?)"[\w\W\s]{0,16}"(.*?)"[\w\W\s]{0,10}>(.*?)<</expres>
+<page>http://mamahd.com/index.html</page>
+<referer></referer>
+<cookieJar></cookieJar>
+</regex><thumbnail>http://www.lafouinedunet.com/images/mamahd.jpg</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR deepskyblue]Latino Web[/COLOR]  [COLOR skyblue]Espagnole[/COLOR] </title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[makelist.param1]</title>
+<link>$doregex[url]|User-Agent=iPad&amp;Referer=http://latino-webtv.com/player/jwplayer.flash.swf</link>
+<regex>
+<name>url</name>
+<expres>file: "(.*?)"</expres>
+<page>http://latino-webtv.com/embed/$doregex[url2]</page>
+<referer>http://embed.latino-webtv.com/natgeo.html</referer>
+<agent>Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0</agent>
+</regex>
+<regex>
+<name>url2</name>
+<expres>SRC="http://latino-webtv.com/embed/(.*?)"</expres>
+<page>http://embed.latino-webtv.com/$doregex[url3]</page>
+<agent>iPad</agent>
+</regex>
+<regex>
+<name>url3</name>
+<expres>src="http://embed.latino-webtv.com/(.*?)"</expres>
+<page>http://latino-webtv.com/[makelist.param1]</page>
+<agent>iPad</agent>
+</regex>
+<thumbnail>[makelist.param3]</thumbnail>
+]]></listrepeat>
+<expres>href="(.*?)"[\w\W\s]{0,7}alt="(.*?)"[\w\W\s]{0,2}src="(.*?)"</expres>
+<page>http://latino-webtv.com/</page>
+<referer></referer>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>http://ahp.li/68ae21901bb389971f9f.png</thumbnail>
+</item>
+
+
+
+
+
+<item>
+<title>[COLOR white]urlresolver-shani[/COLOR]</title>
+<urlsolve>http://ok.ru/video/21342784162</urlsolve>
+</item>
+<item>
+<title>[COLOR cyan]multi listas m3u[/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[COLOR cyan][makelist.param1][/COLOR] </title>
+<link>fonix.pt</link>
+<externallink>[makelist.param1]|User-Agent=Kodi/15.2 (Windows NT 6.1) App_Bitness/32 Version/15.2 Git:2015-10-19-02e7013</externallink>
+
+]]></listrepeat>
+<expres>(http:.*?)\n</expres>
+<page>http://pastebin.com/raw/XndZLiea</page>
+<referer></referer>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+
+
+<item>
+<title>lista m3u</title>
+<link>ignore</link>
+<externallink>http://104.236.28.30:8081/get.php?username=leandro&amp;password=lv7SNyM2IJ&amp;type=m3u&amp;output=mpegts$$TSDOWNLOADER$$</externallink>
+</item>
+
+<item>
+<title>https://vimeo.com | urlresolver</title>
+<link>$doregex[GetUrl]</link>
+<regex>
+<name>GetUrl</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url='https://vimeo.com/191728507/845590bd91'):
+    import urlresolver
+    u = urlresolver.resolve(url)
+    return u
+]]></expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+
+
+
+
+<item>
+<title>[COLOR darkgrey][B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR] Youtube - Film  [/COLOR][COLOR green][COLOR red]•[/COLOR][/B]</title>
+<link>http://fonix.pt</link>
+<externallink>https://pastebin.com/raw/Rt94W09r</externallink>
+<thumbnail>http://upimagens.com/di/O3V7/youtubes.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+=====================================================================================================================
+
+
+<item>
+<title>Netplayer.pt SPORTVS</title>
+<link>$doregex[makelist2]</link>
+<thumbnail>http://netplayer.pt/images/slide.jpg</thumbnail>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+<title>[makelist2.param2]</title>
+<link>$doregex[makelist]</link>
+<thumbnail>http://netplayer.pt/images/slide.jpg</thumbnail>
+]]></listrepeat>
+<expres>a href="(.*?)">(.*?)<</expres>
+<page>http://netplayer.pt/index.php</page>
+<referer></referer>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[COLOR skyblue] [makelist2.param2][/COLOR]</title>
+<link>[makelist.param1]</link>
+<thumbnail>http://netplayer.pt/images/slide.jpg</thumbnail>
+]]></listrepeat>
+<expres>"(http.*?m3u8)"</expres>
+<page>http://netplayer.pt/[makelist2.param1]</page>
+<referer></referer>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>http://netplayer.pt/images/slide.jpg</thumbnail>
+<fanart>https://wallpaperscraft.com/image/eric_berry_lymphoma_cancer_disease_american_football_98255_3840x2160.jpg</fanart>
+</item>
+
+
+<item>
+<title>www.liveonlinetv247.info</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[makelist.param1]</title>
+<link>plugin://plugin.video.f4mTester/?url=$doregex[url1]&amp;streamtype=HLS</link>
+<thumbnail></thumbnail>
+]]></listrepeat>
+<expres><![CDATA[<li><a href="\/watch.*?title=(.*?)\&channel=(.*?)"]]></expres>
+<page>http://www.sport247.live/</page>
+</regex>
+<regex>
+<name>url1</name>
+<expres><![CDATA[<source type=".*?src="(.*?)"]]></expres>
+<page>http://www.liveonlinetv247.info/embed/[makelist.param2].php</page>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+
+<item>
+<title>www.mytvonline.org</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[makelist.param1]</title>
+<link>$doregex[url1]</link>
+<thumbnail></thumbnail>
+]]></listrepeat>
+<expres><![CDATA[<iframe name=.*?src="(.*?)" scro]]></expres>
+<page>http://www.mytvonline.org/</page>
+</regex>
+<regex>
+<name>url1</name>
+<listrepeat><![CDATA[
+<title>[url1.param3]</title>
+<link>$doregex[url2]</link>
+<thumbnail>[url1.param2]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[onclick=".*?'(.*?)','vide.*?img src="(.*?)" title="(.*?)"]]></expres>
+<page>http://www.mytvonline.org/[makelist.param1]</page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>url2</name>
+<expres><![CDATA[file: "(.*?)"]]></expres>
+<page>[url1.param1]</page>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+
+
+
+<item>
+<title> http://urhd.tv/</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[COLOR yellow][makelist.param2][/COLOR] [[makelist.param1]]</title>
+<link>$doregex[getUrl]</link>
+<thumbnail>[makelist.param3]</thumbnail>
+]]></listrepeat>
+<expres>alive":(.*?),.+?display_name":"(.*?)","picture":"(.*?)","slug":"\/(.*?)"</expres>
+<page>$doregex[getPage]</page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import re
+ source = re.search(r"flashplayer.+'\/(.*?)'.*\s.*'(http.*?)'", page_data)
+ return source.group(2) + '|Referer=http://urhd.tv/' + source.group(1)
+]]></expres>
+<page>http://urhd.tv/[makelist.param4]</page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>getPage</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import re
+ strurl = re.findall('channels="(.*)"', page_data)[0].replace('\/', '/').replace('&quot;','"').replace('false', '[COLOR red]Offline[/COLOR]').replace('true', '[COLOR green]Online[/COLOR]')
+ return strurl
+]]></expres>
+<page>http://urhd.tv/</page>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+
+
+
+<item>
+<title>DRAGONBALL SUPER</title>
+<link>$doregex[makelist]</link>
+<thumbnail>http://i.imgur.com/oWtHRW1.jpg?v=1001</thumbnail>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+                <title>[COLOR yellow]PAGE [makelist.param1][/COLOR]</title>
+                <link>$doregex[makelist2]</link>
+        <fanart>http://67.media.tumblr.com/b34b01ac4f3221fff69c33d5dadbfbc8/tumblr_o3u3joX19X1st6sxuo1_1280.jpg</fanart>
+]]></listrepeat>
+<expres>([0-9]+),?</expres>
+<page>$doregex[getPageRange]</page>
+<referer></referer>
+</regex>
+<regex>
+<name>getPageRange</name>
+<expres><![CDATA[#$pyFunction
+import requests
+import re
+def GetLSProData(page_data,Cookie_Jar,m):
+        url='http://www.oremanga.com/738-1-Dragonball+Super.html'
+        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0',
+        'Referer': 'http://www.oremanga.com/738-1-Dragonball+Super.html'}
+        pagebegin=int(1)
+        pageend=int(1)
+        source = requests.get(url, headers=headers)
+        matchpag = re.compile('a.*href=".*?">(\d+)<').findall(source.text)
+        for pagenum in matchpag:
+
+                if pagenum > pageend:
+                        pageend=int(pagenum)
+        pageend=int(pagenum)+1
+        print range(pagebegin,pageend)
+        return range(pagebegin,pageend)
+]]></expres>
+<page></page>
+<referer></referer>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+<title>[makelist2.param3]</title>
+<link>$doregex[makelist3]</link>
+]]></listrepeat>
+<expres><![CDATA[id="thread_([^"]+)".*\n.*a.*href="([^"]+)".*?>(.*)<]]></expres>
+<page>http://www.oremanga.com/738-[makelist.param1]-Dragonball+Super.html</page>
+<referer>http://www.oremanga.com/</referer>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>makelist3</name>
+<listrepeat><![CDATA[
+<title>[makelist3.param2]</title>
+<link>[makelist3.param1]</link>
+]]></listrepeat>
+<expres>source src="([^"]+)".*?label='([^']+)'</expres>
+<page>http://www.oremanga.com/viewthread.php?tid=[makelist2.param1]</page>
+<referer>http://www.oremanga.com/</referer>
+</regex>
+</item>
+
+
+
+<item>
+<title>[COLOR lawngreen][B]•[/B][/COLOR][COLOR white][B] Estádio Futebol[/B][/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[COLOR lawngreen][B]•[/B][/COLOR][COLOR white][B][makelist.param2][/B][/COLOR]</title>
+<sportsdevil>http://www.estadiofutebol.com/[makelist.param1]</sportsdevil>
+<thumbnail>http://g02.a.alicdn.com/kf/HTB11NwdHVXXXXa9XpXXq6xXFXXX3/Wholesale-3d-wall-mural-TV-background-3d-murals-Sports-football-theme-stadium-3d-photo-murals-soccer.jpg</thumbnail>
+<referer></referer>
+<thumbnail>[makelist.param3]</thumbnail>
+]]></listrepeat>
+<expres>a href="(.*)".*title="(.*?)".*?src="(.*?)"</expres>
+<page>http://www.estadiofutebol.com/</page>
+<referer></referer>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>http://g02.a.alicdn.com/kf/HTB11NwdHVXXXXa9XpXXq6xXFXXX3/Wholesale-3d-wall-mural-TV-background-3d-murals-Sports-football-theme-stadium-3d-photo-murals-soccer.jpg</thumbnail>
+<fanart></fanart>
+</item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<item>
+<title>[COLOR darkgrey][B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR] SEM BILHETE [/COLOR][COLOR green][COLOR red]•[/COLOR][/B]</title>
+<link>http://fonix.pt</link>
+<jsonrpc>plugin://plugin.video.sembilhete.tv/?url=&mode=main&thumb=&type=movie</jsonrpc>
+<thumbnail>http://upimagens.com/di/47H7/logo.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR yellowgreen] ARENAVISION [COLOR white][9][/COLOR] [/COLOR][COLOR red]•[/COLOR][COLOR magenta] Liga Nos [/COLOR][/B]</title>
+<link>plugin://program.plexus/?url=$doregex[hash]&amp;mode=1&amp;name=Inspir@tion</link>
+<regex>
+<name>hash</name>
+<expres>this.loadPlayer\("(.*?)"</expres>
+<page>http://www.arenavision.in/av9</page>
+<referer>http://www.arenavision.in</referer>
+<setcookie>beget=begetok</setcookie>
+</regex>
+<thumbnail>http://s4.postimg.org/x4998hvkt/liganos.png</thumbnail>
+<fanart>http://s15.postimg.org/pyrcvek2z/PLEXUS.jpg</fanart></item>
+
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR yellowgreen] ARENAVISION [COLOR white][16][/COLOR] [/COLOR][COLOR red]•[/COLOR][COLOR magenta] Liga Nos [/COLOR][/B]</title>
+<link>plugin://program.plexus/?url=$doregex[hash]&amp;mode=1&amp;name=Inspir@tion</link>
+<regex>
+<name>hash</name>
+<expres>this.loadPlayer\("(.*?)"</expres>
+<page>http://www.arenavision.in/av16</page>
+<referer>http://www.arenavision.in</referer>
+<setcookie>beget=begetok</setcookie>
+</regex>
+<thumbnail>http://s4.postimg.org/x4998hvkt/liganos.png</thumbnail>
+<fanart>http://s15.postimg.org/pyrcvek2z/PLEXUS.jpg</fanart></item>
+
+
+
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR lightslategray] ARENAVISION [COLOR red]•[/COLOR][COLOR white] [1-36] [/COLOR][/B]</title>
+<link>http://Ignoreme</link>
+<externallink>https://pastebin.com/raw/1zt0xnXx</externallink>
+<thumbnail>http://arenavision.in/sites/default/files/FAVICON_AV2015.png</thumbnail>
+<fanart>http://s15.postimg.org/pyrcvek2z/PLEXUS.jpg</fanart></item>
+</item>
+</items>
+</channel>
+
+
+
+
+
+
+
+<item> 
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR yellow] Sport Lemon [/COLOR][COLOR red]•[/COLOR] [COLOR magenta] [Agenda] [/COLOR][/B]</title>
+<link>http://fonix.pt</link>
+<jsonrpc>plugin://plugin.video.SportsDevil/?item=url=livesports/sportlemon.cfg&amp;mode=1</jsonrpc>
+<thumbnail>http://upimagens.com/di/PT0T/original.jpg</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+</item>
+
+
+
+
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR yellow] firstrowsports.ge [/COLOR][COLOR red]•[/COLOR] [COLOR magenta] [Agenda] [/COLOR][/B]</title>
+<link>http://fonix.pt</link>
+<jsonrpc>plugin://plugin.video.SportsDevil/?item=url=livesports/firstrowsports.ge.cfg&amp;mode=1</jsonrpc>
+<thumbnail>http://upimagens.com/di/PT0T/original.jpg</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+
+
+
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR yellow] StopStream [/COLOR][COLOR red]•[/COLOR] [COLOR magenta] [Agenda] [/COLOR][/B]</title>
+<link>http://fonix.pt</link>
+<jsonrpc>plugin://plugin.video.SportsDevil/?item=url=livesports/StopStream.com.cfg&amp;mode=1</jsonrpc>
+<thumbnail>http://upimagens.com/di/PT0T/original.jpg</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+
+
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR yellow] Bundesliga Streams [/COLOR][COLOR red]•[/COLOR] [COLOR magenta] [Agenda] [/COLOR][/B]</title>
+<link>http://fonix.pt</link>
+<jsonrpc>plugin://plugin.video.SportsDevil/?item=url=livesports/bundesliga-streams.net.cfg&amp;mode=1</jsonrpc>
+<thumbnail>http://upimagens.com/di/PT0T/original.jpg</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+
+
+
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR yellow] FirsTrow Sports [/COLOR][COLOR red]•[/COLOR] [COLOR magenta] [Agenda] [/COLOR][/B]</title>
+<link>http://fonix.pt</link>
+<jsonrpc>plugin://plugin.video.SportsDevil/?item=url=livesports/firstrowsports.ge.cfg&amp;mode=1</jsonrpc>
+<thumbnail>http://upimagens.com/di/PT0T/original.jpg</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+
+
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR yellow] live Football Video [/COLOR][COLOR red]•[/COLOR] [COLOR magenta] [Agenda] [/COLOR][/B]</title>
+<link>http://fonix.pt</link>
+<jsonrpc>plugin://plugin.video.SportsDevil/?item=url=livesports/livefootballvideo.com.cfg&amp;mode=1</jsonrpc>
+<thumbnail>http://upimagens.com/di/PT0T/original.jpg</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+*****************************************************************************************************************
+
+
+
+
+<item>
+<title>Prueba NovelasHD</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+        <title>[COLOR yellow] Letra [makelist.param2] [/COLOR]</title>
+        <link>$doregex[makelist2]</link>
+        <thumbnail>http://www.novelashdgratis.tv/img/logo.gif</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[href="\/(letra.+?)">(\w)<]]></expres>
+<page>http://www.novelashdgratis.tv/</page>
+<referer></referer>
+<cookieJar></cookieJar>
+</regex>
+
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+        <title>[COLOR yellow] [makelist2.param3][/COLOR]</title>
+        <link>$doregex[makelist3]</link>
+        <thumbnail>[makelist2.param1]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[picture".*\s.*img src="([^"]*)"[\w\W\s]*?href="([^"]*)".rel="bookmark".title="([^"]*)"]]></expres>
+<page>http://www.novelashdgratis.tv/[makelist.param1]</page>
+<referer>http://www.novelashdgratis.tv/</referer>
+<cookieJar></cookieJar>
+</regex>
+
+<regex>
+<name>makelist3</name>
+<listrepeat><![CDATA[
+        <title>[COLOR yellow][makelist3.param2] [/COLOR]</title>
+        <link>$doregex[makelist4]</link>
+        <thumbnail>[makelist2.param1]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[lc"><a href="([^"]*)".+?>(.*?)<]]></expres>
+<page>http://www.novelashdgratis.tv/[makelist2.param2]</page>
+<referer></referer>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+
+
+
+
+<item>
+<title>Dailymotion Live Stream</title>
+<link>plugin://plugin.video.dailymotion_com/?url=x4kopfq&mode=playLiveVideo</link>
+</item>
+
+
+<item>
+<title>Sportsnet World</title>
+<sportsdevil>http://cricfree.sc/sportsnet-world-live-streaming</sportsdevil>
+<referer>http://cricfree.sc</referer>
+<thumbnail></thumbnail>
+</item>
+
+
+
+
+
+
+<item>
+<title>OK.RU Stream</title>
+<link>$doregex[PlayOk.Ru]</link>
+<regex>
+<name>PlayOk.Ru</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url='http://ok.ru/video/21342784162'):
+ import requests, urlresolver, re
+ u = ''
+ if urlresolver.HostedMediaFile(url):
+	u = urlresolver.resolve(url)
+	return u
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+
+
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR lightslategray] ARENAVISION [COLOR white] [Agenda] [/COLOR] [COLOR red]•[/COLOR][COLOR magenta] (fuso +1Hora-Madrid)[/COLOR][/B]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<item><title>[COLOR yellow][makelist.param1][/COLOR] [COLOR white][makelist.param2][/COLOR] [COLOR green][B][makelist.param4][/B][/COLOR][COLOR white][B] [makelist.param5][/B][/COLOR]</title>
+<link>plugin://program.plexus/?url=$doregex[hash]&amp;mode=1 -</link>
+      <regex>
+      <name>hash</name>
+      <expres>this.loadPlayer\("(.*?)"</expres>
+      <page>http://www.arenavision.in/AV[makelist.param6]</page>
+      <referer>http://www.arenavision.in</referer>
+      <setcookie>beget=begetok</setcookie>
+      </regex>
+      <thumbnail>http://arenavision.in/sites/default/files/FAVICON_AV2015.png</thumbnail>
+			<fanart>http://s15.postimg.org/pyrcvek2z/PLEXUS.jpg</fanart>
+</item>
+]]></listrepeat>
+<expres>190px">(.*?)<[\w\W\s]{0,45}182px">(.*?)<[\w\W\s]{0,45}188px">(.*?)<[\w\W\s]{0,45}283px">(.*?)<[\w\W\s]{0,45}685px">(.*?)<[\w\W\s]{0,45}317px">(.*?)-</expres>
+<page>http://arenavision.in/agenda</page>
+<Agent>Mozilla</Agent>
+</regex>
+<thumbnail>http://arenavision.in/sites/default/files/FAVICON_AV2015.png</thumbnail>
+<fanart>http://s15.postimg.org/pyrcvek2z/PLEXUS.jpg</fanart></item>
+
+
+
+
+
+
+
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR green] Ultimate Outdoors [COLOR red]•[/COLOR][COLOR white] [SportDevil][/COLOR][/B]</title>
+<link>$doregex[sxlink]</link>
+<regex>
+<name>sxlink</name>
+<expres><![CDATA[high.stream.*?(http.*?)[",']\W]]></expres>
+<page>http://www.filmon.com/api-v2/channel/$doregex[ch_id]</page>
+<referer>http://www.filmon.com/tv/channel/export?channel_id=$doregex[ch_id]</referer>
+<agent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36</agent>
+<accept>*/*; q=0.01</accept><cookieJar></cookieJar>
+</includeheaders>
+</regex>
+<regex>
+<name>ch_id</name><expres><![CDATA[clicked_channel_id.*?[",'](.*?)[",']\W]]></expres>
+<page>https://www.filmon.com/tv/ultimate-outdoors</page>
+<agent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36</agent>
+<accept>*/*; q=0.01</accept>
+</includeheaders>
+</regex>
+<thumbnail>http://pursuitchannel.com/wp-content/uploads/2014/12/Ultimate-Outdoors-logo-400x400.jpg</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+
+
+
+
+<item>
+<title>Fiba Live Stream</title>
+<utube>Oq-nL_H0NZk</utube>
+<thumbnail>https://yt3.ggpht.com/-ohlEKs4XYxo/AAAAAAAAAAI/AAAAAAAAAAA/e8qY1QNf1Qs/s100-c-k-no-mo-rj-c0xffffff/photo.jpg</thumbnail>
+<fanart>http://SimpleKore.com/Tut/VideoAddon/fanart.jpg</fanart>
+</item>
+
+
+<item>
+<title>MasterTourTT Live Stream</title>
+<utube>Ps2SdizHvNQ</utube>
+<thumbnail>https://yt3.ggpht.com/-LiDGiHgE3sA/AAAAAAAAAAI/AAAAAAAAAAA/z9SZuJg1UPU/s100-c-k-no-mo-rj-c0xffffff/photo.jpg</thumbnail>
+<fanart>http://SimpleKore.com/Tut/VideoAddon/fanart.jpg</fanart>
+</item>
+
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR lime] Food Network [COLOR red]•[/COLOR][COLOR white] [Sport Devil/P2P][/COLOR][/B]</title>
+<link>$doregex[sxlink]</link>
+<regex>
+<name>sxlink</name>
+<expres><![CDATA[high.stream.*?(http.*?)[",']\W]]></expres>
+<page>http://www.filmon.com/api-v2/channel/$doregex[ch_id]</page>
+<referer>http://www.filmon.com/tv/channel/export?channel_id=$doregex[ch_id]</referer>
+<agent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36</agent>
+<accept>*/*; q=0.01</accept><cookieJar></cookieJar>
+</includeheaders>
+</regex>
+<regex>
+<name>ch_id</name><expres><![CDATA[clicked_channel_id.*?[",'](.*?)[",']\W]]></expres>
+<page>https://www.filmon.com/tv/food-network</page>
+<agent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36</agent>
+<accept>*/*; q=0.01</accept>
+</includeheaders>
+</regex>
+
+
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR green] WorldTop100 [COLOR red]•[/COLOR][COLOR white] [Youtube] [/COLOR][/B]</title>
+<link>http://fonix.pt</link>
+<jsonrpc>plugin://plugin.video.youtube/user/jeppiz1/</jsonrpc>
+<thumbnail>https://yt3.ggpht.com/-Af1aE5EYIwo/AAAAAAAAAAI/AAAAAAAAAAA/TiH3E5X-9OQ/s100-c-k-no-mo-rj-c0xffffff/photo.jpg</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR green] Musica Anos 70/80/90 [COLOR red]•[/COLOR][COLOR white] [Youtube] [/COLOR][/B]</title>
+<link>http://fonix.pt</link>
+<jsonrpc>plugin://plugin.video.youtube/user/ticohirth/</jsonrpc>
+<thumbnail>http://www.getonconcept.com.br/2715-thickbox_default/quadro-i-love-anos-80.jpg</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR green] Tomorrowland [COLOR red]•[/COLOR][COLOR white] [Youtube] [/COLOR][/B]</title>
+<link>http://fonix.pt</link>
+<jsonrpc>plugin://plugin.video.youtube/user/TomorrowlandChannel/</jsonrpc>
+<thumbnail>https://yt3.ggpht.com/-3XgUfBpSx-U/AAAAAAAAAAI/AAAAAAAAAAA/dvkt4EKQbMs/s100-c-k-no-mo-rj-c0xffffff/photo.jpg</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+
+
+<item>
+<title>DOBRADOS & lEGENDADOS</title>
+<link>https://forums.tvaddons.ag/ignorme</link>
+<jsonrpc>plugin://plugin.video.youtube/user/kaio5151/</jsonrpc>
+<thumbnail>https://yt3.ggpht.com/-1kCe6rbK_DQ/AAAAAAAAAAI/AAAAAAAAAAA/_jT-RboE2cY/s100-c-k-no-mo-rj-c0xffffff/photo.jpg</thumbnail>
+</item>
+
+
+<item>
+<title>Mega Filmes (br)</title>
+<link>https://forums.tvaddons.ag/ignorme</link>
+<jsonrpc>plugin://plugin.video.youtube/user/XxAlemao97xX/</jsonrpc>
+<thumbnail>https://yt3.ggpht.com/-1kCe6rbK_DQ/AAAAAAAAAAI/AAAAAAAAAAA/_jT-RboE2cY/s100-c-k-no-mo-rj-c0xffffff/photo.jpg</thumbnail>
+</item>
+
+
+<item>
+<title>Filmes Online (br)</title>
+<link>https://forums.tvaddons.ag/ignorme</link>
+<jsonrpc>plugin://plugin.video.youtube/user/vladuarte/</jsonrpc>
+<thumbnail>https://yt3.ggpht.com/-1kCe6rbK_DQ/AAAAAAAAAAI/AAAAAAAAAAA/_jT-RboE2cY/s100-c-k-no-mo-rj-c0xffffff/photo.jpg</thumbnail>
+</item>
+
+
+
+<item>
+<title>canalcinemalibre</title>
+<link>https://forums.tvaddons.ag/ignorme</link>
+<jsonrpc>plugin://plugin.video.youtube/user/canalcinemalibre/</jsonrpc>
+<thumbnail>https://yt3.ggpht.com/-1kCe6rbK_DQ/AAAAAAAAAAI/AAAAAAAAAAA/_jT-RboE2cY/s100-c-k-no-mo-rj-c0xffffff/photo.jpg</thumbnail>
+</item>
+
+<item>
+<title>CineTube</title>
+<link>https://forums.tvaddons.ag/ignorme</link>
+<jsonrpc>plugin://plugin.video.youtube/user/canalcinetubeoficial/</jsonrpc>
+<thumbnail>https://yt3.ggpht.com/-1kCe6rbK_DQ/AAAAAAAAAAI/AAAAAAAAAAA/_jT-RboE2cY/s100-c-k-no-mo-rj-c0xffffff/photo.jpg</thumbnail>
+</item>
+
+
+
+<item>
+<title>NetFilmes</title>
+<link>https://forums.tvaddons.ag/ignorme</link>
+<jsonrpc>plugin://plugin.video.youtube/user/canalnetfilmes/</jsonrpc>
+<thumbnail>https://yt3.ggpht.com/-1kCe6rbK_DQ/AAAAAAAAAAI/AAAAAAAAAAA/_jT-RboE2cY/s100-c-k-no-mo-rj-c0xffffff/photo.jpg</thumbnail>
+</item>
+
+
+
+
+<item>
+<title>VIDEOS DO YOUTUBE</title>
+<utube>Oq-nL_H0NZk</utube>
+<thumbnail>http://SimpleKore.com/Tut/VideoAddon/icon.png</thumbnail>
+<fanart>http://SimpleKore.com/Tut/VideoAddon/fanart.jpg</fanart>
+</item>
+
+
+
+
+
+
+
+
+<item>
+<title>FILMES TERROR </title>
+<link>$doregex[makelist2]</link>
+
+
+
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+<title>page [makelist2.param1]</title>
+<link>$doregex[makelist3]</link>
+<referer></referer>
+<thumbnail></thumbnail>
+]]></listrepeat>
+<expres> (.*?),</expres>
+<page>$doregex[get-number]</page>
+<cookieJar></cookieJar>
+</regex>
+
+<regex>
+            <name>makelist3</name>
+            <listrepeat><![CDATA[
+                        <title>[makelist3.param2]</title>
+                        <link>plugin://plugin.video.youtube/play/?video_id=[makelist3.param1]</link>
+                        <thumbnail>https://i.ytimg.com/vi/[makelist3.param1]/hqdefault.jpg</thumbnail>
+            ]]></listrepeat>
+            <expres>spf-link " dir="ltr" href="\/watch\?v=(.*?)&amp;.*?\n(.*)</expres>
+            <page>$doregex[get-source-page]</page>
+            <cookieJar></cookieJar>
+</regex>
+
+<regex>
+<name>get-number</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url='https://www.youtube.com/playlist?list=PLll1Woy810ondmZgPZjuafBvuPy1UXZ5u'):
+
+ import requests
+ import re
+
+ headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux i686; rv:42.0) Gecko/20100101 Firefox/42.0 Iceweasel/42.0', 'Accept-Language': 'en-US'}
+
+ rr = requests.get(url, headers=headers)
+ number = re.findall('</a></li><li>(.*?) vid', rr.text)[0]
+ #number = number.encode('unicode-escape')
+ number = number.replace(',', '')
+ real = int(float(number)) / 100
+ real2 = real + 3
+
+ liste = list(range(real2))
+ return liste
+]]></expres>
+<page></page>
+</regex>
+
+<regex>
+<name>get-source-page</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url='https://www.youtube.com/playlist?list=PLll1Woy810ondmZgPZjuafBvuPy1UXZ5u'):
+
+ import requests
+ import re
+ import json
+
+ headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux i686; rv:42.0) Gecko/20100101 Firefox/42.0 Iceweasel/42.0'}
+ r1 = requests.get(url, headers = headers)
+ source = r1.text
+ page = [makelist2.param1]
+ N = int(float(page))
+ pre = 'https://www.youtube.com'
+ if (N > 1):
+
+  for itr in range (1,N):
+    continuex = re.findall('data-uix-load-more-href="(.*?)"', source)[0]
+    continuationx = pre + continuex
+    r = requests.get(continuationx, headers = headers)
+    source = r.text
+    jdata = json.loads(source)
+    source = jdata["load_more_widget_html"]
+    page = jdata["content_html"]
+  return page
+   
+ else:
+
+  return source
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+
+
+
+
+
+
+<item>
+<title>https://www.youtube.com/user/DisneyMovieTrailers/videos</title>
+<link>$doregex[makelist2]</link>
+
+
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+<title>page [makelist2.param1]</title>
+<link>$doregex[makelist3]</link>
+<referer></referer>
+<thumbnail></thumbnail>
+]]></listrepeat>
+<expres> (.*?),</expres>
+<page>$doregex[get-number]</page>
+<cookieJar></cookieJar>
+</regex>
+
+<regex>
+            <name>makelist3</name>
+            <listrepeat><![CDATA[
+                <title>[COLOR red][makelist3.param2][/COLOR]
+ [makelist3.param3]</title>
+                <link>plugin://plugin.video.youtube/play/?video_id=[makelist3.param1]</link>
+                <thumbnail>https://i.ytimg.com/vi/[makelist3.param1]/hqdefault.jpg</thumbnail>
+            ]]></listrepeat>
+            <expres><![CDATA[href="\/watch\?v=(.*?)">(.*?)<.*?> -(.*?)</span></h3>]]></expres>
+            <page>$doregex[get-source-page]</page>
+            <cookieJar></cookieJar>
+</regex>
+
+<regex>
+<name>get-number</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,lists='[makelist.param1]'):
+
+ real = 27 + 2
+
+ liste = list(range(real))
+ return liste
+]]></expres>
+<page></page>
+</regex>
+
+<regex>
+<name>get-source-page</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url='https://www.youtube.com/user/DisneyMovieTrailers/videos',page='[makelist2.param1]'):
+
+ import requests
+ import re
+ import json
+
+ page = str(page)
+ print page
+ pageUrl=url
+ headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux i686; rv:42.0) Gecko/20100101 Firefox/42.0 Iceweasel/42.0'}
+ r1 = requests.get(pageUrl, headers = headers)
+ source = r1.text
+ source =  source.replace('&quot;', '"').replace("'", "'").replace("&amp;", "&")
+ pre = 'https://www.youtube.com'
+ #print pre
+ #page = [makelist2.param1]
+ N = int(float(page))
+
+ if (N > 1):
+
+  for itr in range (1,N):
+    continuex = re.findall('data-uix-load-more-href="(.*?)"', source)[0]
+    continuationx = pre + continuex
+    r = requests.get(continuationx, headers = headers)
+    source = r.text
+    jdata = json.loads(source)
+    source = jdata["load_more_widget_html"]
+    page = jdata["content_html"]
+    page =  page.replace('&quot;', '"').replace("'", "'").replace("&amp;", "&")
+  return page
+   
+ else:
+
+  return source
+]]></expres>
+<page></page>
+</regex>
+
+</item>
+
+
+
+
+
+
+
+
+
+
+<item>
+<title> https://www.youtube.com/playlist?list=PL7dDiH6mUvtmeV9nwaV-mGtuYn97WkGIX</title>
+<link>https://forums.tvaddons.ag/$doregex[makelist]</link>
+<regex>
+  <name>makelist</name>
+  <listrepeat><=!=[=C=D=A=T=A=[
+      <title>[COLOR yellow] Yorubahood[/COLOR] [COLOR skyblue]Page: [makelist.param2][/COLOR]</title>
+      <link>https://forums.tvaddons.ag/$doregex[makelist2]</link>
+      <thumbnail>https://yt3.ggpht.com/-1kCe6rbK_DQ/AAAAAAAAAAI/AAAAAAAAAAA/_jT-RboE2cY/s100-c-k-no-mo-rj-c0xffffff/photo.jpg</thumbnail>
+  ]=]=></listrepeat>
+  <expres>continuation=(.*?)-(\d),</expres>
+      <page>$doregex[getpage]</page>
+</regex>
+
+<regex>
+      <name>getpage</name>
+      <expres>(continuation=4qmFsgIuEiRWTFBMN2REaUg2bVV2dG1lVjlud2FWLW1HdHVZbjk3V2tHSVgaBkNHVSUzRA%253D%253D-1,
+
+continuation=4qmFsgIsEiRWTFBMN2REaUg2bVV2dG1lVjlud2FWLW1HdHVZbjk3V2tHSVgaBENNa0I%253D-2,
+
+continuation=4qmFsgIsEiRWTFBMN2REaUg2bVV2dG1lVjlud2FWLW1HdHVZbjk3V2tHSVgaBENLMEM%253D-3,
+
+continuation=4qmFsgIsEiRWTFBMN2REaUg2bVV2dG1lVjlud2FWLW1HdHVZbjk3V2tHSVgaBENKRUQ%253D-4,
+
+continuation=4qmFsgIsEiRWTFBMN2REaUg2bVV2dG1lVjlud2FWLW1HdHVZbjk3V2tHSVgaBENQVUQ%253D-5,
+
+continuation=4qmFsgIsEiRWTFBMN2REaUg2bVV2dG1lVjlud2FWLW1HdHVZbjk3V2tHSVgaBENOa0U%253D-6,)<expres>
+      <page></page>
+</regex>
+
+<regex>
+<name>makelist2</name>
+      <listrepeat><=!=[=C=D=A=T=A=[
+      <title>[COLOR yellow] [makelist2.param2][/COLOR]</title>
+      <link>plugin://plugin.video.youtube/play/?video_id=[makelist2.param1]</link>
+      <thumbnail>https://i.ytimg.com/vi/[makelist2.param1]/hqdefault.jpg</thumbnail>
+]=]=></listrepeat>
+<expres>data-video-id=."(.*?)." data-title=."(.*?)."</expres>
+<page>https://www.youtube.com/browse_ajax?action_continuation=1&continuation=[makelist.param1]</page>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>https://yt3.ggpht.com/-1kCe6rbK_DQ/AAAAAAAAAAI/AAAAAAAAAAA/_jT-RboE2cY/s100-c-k-no-mo-rj-c0xffffff/photo.jpg</thumbnail>
+</item>
+
+
+
+
+
+
+
+
+<item>
+<title>[COLOR darkgrey][B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR] SPECTRO FILMS [COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR] [/B]</title>
+<link>http://fonix.pt</link>
+<jsonrpc>plugin://plugin.video.specto/?action=movieNavigator</jsonrpc>
+<thumbnail>https://s21.postimg.io/b3deqiuaf/movies.png</thumbnail>
+<fanart>http://s10.postimg.org/4j8lmh789/fanart.jpg</fanart>
+</item>
+
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR green] CANAIS PLEXUL [COLOR red]•[/COLOR][COLOR white] [/COLOR][/B]</title>
+<link>plugin://program.plexus/?url=http://content.asplaylist.net/eUNqSEEzaGxRbWhpZ0lpV0FESjhZM1h1cVJqTmNTckFRY1FuS2pKa1JkeE1lQmo4UWtiUVlUcFlmUTVIY1RGQUJ4WWJEVlNaaTNWU3kvNldZbEdSTlE9PQ/cdn/1182_reg.acelive&amp;mode=1&amp;name=INSPIR@TION$$lsname=DOGTV</link>
+
+
+
+<link>plugin://program.plexus/?url=http://content.asplaylist.net/NUxkei8zOXlwbks0V092YnJhRTdRb3c3UDVON1AwbVo3KzJ0cEpKdW9Lc0pLTjVsOVVQUDZqWjllNExQQi9FR1VoTHpSVktqQTU4c3F4MHNnVGpCR2c9PQ/15638.acelive&amp;mode=1&amp;name=INSPIR@TION$$lsname=MUTV</link>
+
+
+
+
+
+
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
+
+
+
+
+
+
+
+
+
+
+<item>
+<title> [COLOR lime]•[/COLOR]    [COLOR deepskyblue][B] Servidores Internet [/COLOR] [/B]</title>
+<link>$doregex[makelist2]</link>
+ 
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+<title>[COLOR lightblue]Server[/COLOR][COLOR lightgreen] [makelist2.param1][/COLOR]</title>
+<link>$doregex[makelist]</link>
+]]></listrepeat>
+<expres>Server:"(.*?)" URL="(.*?)"; regex"(.*?)"</expres>
+<page>http://bosslulamentv.comli.com/Servidores</page>
+<agent>Kodi/15.2 (Windows NT 6.1) App_Bitness/32 Version/15.2-Git:20151019-02e7013</agent>
+</regex>
+ 
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[COLOR skyblue][makelist.param1][/COLOR]</title>
+<link>plugin://plugin.video.f4mTester/?url=[makelist.param2]&amp;streamtype=TSDOWNLOADER&amp;maxbitrate=0&amp;proxy=None&amp;name=[COLOR lightblue]La Frontera - [/COLOR][makelist.param1] [COLOR lightslategray](server [makelist2.param1])[/COLOR] </link>
+]]></listrepeat>
+<expres>#EXTINF:-1,[makelist2.param3](.*?)\n(.*)</expres>
+<page>[makelist2.param2]</page>
+<agent>Kodi/15.2 (Windows NT 6.1) App_Bitness/32 Version/15.2-Git:20151019-02e7013</agent>
+</regex>
+</item>
+
+
+
+<item>                        
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR green] SPORTV 1 [COLOR red]•[/COLOR][COLOR blue] [br][/COLOR][/B]</title>
+<link>$doregex[m3u8]|User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36</link>
+<regex>
+<name>m3u8</name>
+<expres>file: '([^']*)</expres>
+<page>http://pxstream.tv/embed.php?file=$doregex[page]&amp;referrer=http://aovivonatv.com/player.php?id=17&amp;width=640&amp;height=360&amp;jwplayer=flash</page>
+<referer>http://ekostreams.co/ch/sportvhd.php?width=640&amp;height=360</referer>
+</regex>
+<regex>
+<name>page</name>
+<expres>file='([^']*)</expres>
+<page>http://ekostreams.co/ch/sportvhd.php?width=640&amp;height=360</page>
+</regex>
+<thumbnail>https://3.bp.blogspot.com/-kwdnr0ayJ94/V3Gi7jlQ9mI/AAAAAAAADHE/7jMq-HVkpAIV6loX0DzcW2-qI5S-jJ79wCLcB/s1600/SporTV1.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+</item>
+
+
+<item> 
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR yellow] SPORTS 365 LIVE [COLOR red]•[/COLOR][COLOR white] [Agenda] [/COLOR][/B]</title> 
+<link>http://fui.me</link>
+<jsonrpc>plugin://plugin.video.ZemTV-shani/?mode=56&amp;name=Inspiration&amp;url=sss</jsonrpc>
+<thumbnail>http://tv-net.co/channels-frequencys/wp-content/uploads/2014/11/66-300x287.jpg</thumbnail> 
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+
+
+
+
+<item>
+<title>[COLOR lime][B]***[COLOR red] •MIX• [/COLOR]***[/COLOR] [COLOR white]ZemTV Shani[/COLOR][COLOR red] LISTAS IPTV TEMP[/B][/COLOR]</title>
+<link>http://fui.me</link>
+<jsonrpc>plugin://plugin.video.ZemTV-shani/?mode=55&amp;name=ZemTV-shani&amp;url=sss</jsonrpc>
+<thumbnail>http://s32.postimg.org/xz634w5c5/chk.png</thumbnail>
+<fanart></fanart>
+</item>
+
+
+
+
+<item> 
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR yellow] SPORTS 365 LIVE [COLOR red]•[/COLOR][COLOR white] [Agenda] [/COLOR][/B]</title> 
+<link>http://fui.me</link>
+<jsonrpc>plugin://plugin.video.ZemTV-shani/?mode=56&amp;name=Inspiration&amp;url=sss</jsonrpc>
+<thumbnail>http://tv-net.co/channels-frequencys/wp-content/uploads/2014/11/66-300x287.jpg</thumbnail> 
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR green][COLOR green] Sport TV1 [COLOR red]•[/COLOR][COLOR white] full HD[/COLOR][/B]</title>
+<link>$doregex[m3u8]</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "([^\"].*)"</expres>
+<page>http://widestream.io/embed-57</page>
+<referer>http://widestream.io/</referer>
+</regex>
+<thumbnail>https://www.thelogodb.com/images/media/logo/urqtvs1436898824.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart>
+</item>
+
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR lightslategray] AS AVENTURAS DE SHERLOCK HOLMES [COLOR red]•[/COLOR][COLOR white] Ep:1 [/COLOR][/B]</title>
+<link>$doregex[GetPageUrl]</link>
+<regex>
+<name>GetPageUrl</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url='http://www.dailymotion.com/video/xulws7'):
+    import urlresolver
+    u = urlresolver.resolve(url)
+    return u
+]]></expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>http://s21.postimg.org/hzoh3hd5j/screenshot_79.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart>
+</item>
+
+
+<item>
+<title>Dailymotion</title>
+<link>$doregex[GetPageUrl]</link>
+<regex>
+<name>GetPageUrl</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url='http://www.dailymotion.com/video/xulws7'):
+    import urlresolver
+    u = urlresolver.resolve(url)
+    return u
+]]></expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+
+
+
+
+
+
+<item>
+<multilink>
+<title>multilink</title>
+<title>TRT</title>
+<link>http://trtcanlitv-lh.akamaihd.net/i/TRTOKUL_1@182245/master.m3u8$$lsname=</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+<title>TRT 3</title>
+<link>http://mecliscanlitv-lh.akamaihd.net/i/MECLISTV_1@127503/master.m3u8</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+<title>TRT </title>
+<link>http://trtcanlitv-lh.akamaihd.net/i/TRTOKUL_1@182245/master.m3u8</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</multilink>
+</item>
+
+
+
+<item>
+<title>[COLOR yellow]CANALI TV DIGITALE TERRESTRE[/COLOR]</title>
+<link>http://ignorame</link>
+<thumbnail>https://www.dropbox.com/s/xxb5chdyrbt45ir/tv-italiana.png?dl=1</thumbnail>
+<fanart></fanart>
+<externallink>http://bit.ly/m3ubyinfogw</externallink>
+</item>
+ 
+<item>
+  <title>[COLOR green]LISTE IPTV 1*[/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+     <title>      [COLOR yellow][makelist.param2][/COLOR]    ( [makelist.param1] )  </title>
+    <link>NA</link>
+    <externallink>[makelist.param1][DE]$$TSDOWNLOADER$$</externallink>
+]]></listrepeat>
+<expres>>(http:\/\/(.*?)\/.*?get.php.*?)&lt;</expres>
+<page>http://www.m3uliste.pw/</page>
+<referer></referer>
+<cookieJar></cookieJar>
+</regex>
+</item>
+ 
+<item>
+  <title>[COLOR red]LISTE IPTV 2*[/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+     <title>      [COLOR lightgreen][makelist.param2][/COLOR]    ( [makelist.param1] )  </title>
+    <link>NA</link>
+    <externallink>[makelist.param1]$$TSDOWNLOADER$$</externallink>
+]]></listrepeat>
+<expres>>(http:\/\/(.*?)\/.*?get.php.*?)&lt;</expres>
+<page>http://www.oneplaylist.eu.pn/</page>
+<referer></referer>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+
+<item>
+<title>Test v4</title>
+
+
+<link>$doregex[makelist2]</link>
+
+<regex>
+              <name>makelist2</name>
+                        <listrepeat><![CDATA[
+                        <title>[COLOR blue]KANNAL: -[/COLOR] [makelist2.param1]</title>
+                        <link>[makelist2.param2].m3u8</link>
+              ]]></listrepeat>
+              <expres>(.*).*\n.*(http.*).m3u8</expres>
+              <page>http://kodilive.eu/iptv/res/playzlist.txt</page>
+              <cookieJar></cookieJar>
+              <agent>Mozilla/5.0 (Windows NT 6.1; rv:14.0) Gecko/20100101 Firefox/14.0.1</agent>
+              <connection>1</connection>
+              <includeheaders>1<includeheaders/>
+              <buffer>20971520</buffer>
+</regex>
+
+</item
+
+
+
+
+<item>
+<title>[COLOR darkgrey][B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR] EXODUS [COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR] [/B]</title>
+<link>http://fonix.pt</link>
+<jsonrpc>plugin://plugin.video.exodus/?url=&mode=main&thumb=&type=movie</jsonrpc>
+<thumbnail>http://upimagens.com/di/JS5K/exodus.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+
+
+
+
+
+
+<item>
+<title>[COLOR red]•[/COLOR][COLOR blue][B]Server DmbShare[/B] [/COLOR][COLOR gold][I]IT • DE • UK • USA • AR • FR • EXYU[/I][/COLOR]</title>
+<thumbnail>https://upload.wikimedia.org/wikipedia/en/4/4d/OS_X_Server_Icon.png</thumbnail><fanart>http</fanart>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+     <title>[COLOR blue]Server[/COLOR]    [COLOR lightslategray][I]([makelist.param1])[/I][/COLOR]  </title>
+    <link>NA</link>
+    <externallink>[makelist.param1][DE]$$TSDOWNLOADER$$</externallink>
+]]></listrepeat>
+<expres>EXTINF:-1,AL: (.*).*\n.*(http.*).ts(http:\/\/cp.dmbshare.net:8000\/.*?get.php.*?)&lt;</expres>
+<page>http://www.m3uliste.pw/</page>
+              <cookieJar></cookieJar>
+              <agent>Mozilla/5.0 (Windows NT 6.1; rv:14.0) Gecko/20100101 Firefox/14.0.1</agent>
+              <host>cp.dmbshare.net:8000</host>
+              <connection>1</connection>
+              <includeheaders>1<includeheaders/>
+              <buffer>20971520</buffer>
+</regex>
+
+</item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<item>
+<title>[B][COLOR red]•[/COLOR][COLOR aquamarine] TAÇA [COLOR red]PORTUGAL •[/COLOR][COLOR magenta] (fuso +1Hora-Madrid)[/COLOR][/B]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<item><title>[B][COLOR aquamarine]|[/COLOR][COLOR white]|[/COLOR][COLOR red]|[/COLOR] [COLOR white][makelist.param1] - [COLOR white][makelist.param2] - [COLOR white][makelist.param3] -[COLOR lime] ® [COLOR red]Av [makelist.param4] [/B][/COLOR]</title>
+<link>plugin://plugin.video.p2p-streams/?url=$doregex[hash]&amp;mode=1&amp;name=Inspir@tion - [makelist.param3] - Arenavision</link>
+  <regex>
+  <name>hash</name>
+  <expres>this.loadPlayer\("(.*?)"</expres>
+  <page>http://www.arenavision.in/AV[makelist.param4]</page>
+  <referer>http://www.arenavision.in</referer>
+  <setcookie>beget=begetok</setcookie>
+  </regex>
+</item>
+]]></listrepeat>
+<expres>190px">(.*?)<[\w\W\s]{0,44}182px">(.*?)CET[\w\W\s]{0,109}PORTUGAL CUP[\w\W\s]{0,45}685px">(.*?)<[\w\W\s]{0,80}317px">([0-9]+)</expres>
+<page>http://arenavision.in/schedule</page>
+<Agent>Mozilla</Agent>
+</regex>
+<thumbnail>http://www.pauloteixeira.net/amarantefc/wp-content/uploads/2015/12/logo-taca-portugal.png</thumbnail>
+<fanart>http://s15.postimg.org/pyrcvek2z/PLEXUS.jpg</fanart></item>
+
+
+
+
+
+
+
+
+<item>
+<title>[COLOR green][B][COLOR red]•[/COLOR] CANAIS PT & MIX [COLOR salmon] LISTA4 [/COLOR][/B]</title>
+<title>PT Channels</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[COLOR white][makelist.param1][/COLOR]</title>
+<link>plugin://plugin.video.f4mTester/?url=[makelist.param2]&amp;streamtype=TSDOWNLOADER&amp;maxbitrate=0&amp;proxy=None&amp;name=Plus [makelist.param1]</link>
+<thumbnail>http://s21.postimg.org/bovy3e47r/inspirationlivetv.png</thumbnail>
+<fanart>http://s21.postimg.org/bovy3e47r/inspirationlivetv.png</fanart>]]></listrepeat>
+<expres>#EXTINF:-1,(.*?)\n(.*)</expres>
+<page>http://pro.leaderiptv.com:8000/get.php?username=silvanoferreira.sf@Alfa&amp;password=QeYnuV89H3&amp;type=m3u</page>
+<agent>Kodi/15.2 (Windows NT 6.1) App_Bitness/32 Version/15.2-Git:20151019-02e7013</agent>
+</regex>
+<thumbnail>http://s21.postimg.org/bovy3e47r/inspirationlivetv.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR gold][B][COLOR red]•[/COLOR] ARENAVISION.IN [COLOR red]•[/COLOR][COLOR white] PLEXUS[/COLOR][/B]</title>
+<link>http://fui.me</link>
+<jsonrpc>plugin://plugin.video.p2psport/?mode=av</jsonrpc>
+<thumbnail>http://s32.postimg.org/ryvd4j1mt/Arenavision.png</thumbnail>
+<fanart>http://arenavision.in/sites/default/files/logo_av2015.png</fanart>
+</item>
+
+
+
+<item>
+<title>[COLOR orangered][COLOR violet]Arenavision S1[/COLOR] [COLOR orange]Plexus[/COLOR]</title>
+<link>plugin://program.plexus/?url=sop://broker.sopcast.com:3912/262490&mode=2&amp;mode=2&amp;name=ARENAVISION S1/SOPCAST</link>
+<thumbnail>https://s14.postimg.org/ss6rdyizl/arena_1.png</thumbnail>              
+</item>
+
+
+
+
+
+<item>
+<title>[COLOR lime][B][COLOR red]•[/COLOR] Portugueses Pelo Mundo [COLOR red]•[/COLOR][COLOR white] YOUTUBE REPLAY [/COLOR][/B]</title>
+<link>plugin://plugin.video.youtube/play/?video_id=Xv-CC5UzVQw&list=LLl6GClF3K5NuEHJSXBKNexQ&amp;mode=1&amp;name=INSPIR@TION</link>
+<code>LLl6GClF3K5NuEHJSXBKNexQ</code>
+<thumbnail>http://s15.postimg.org/7048c7sq3/REPLAY.jpg</thumbnail>
+<fanart>http://www.teknolojii.net/wp-content/uploads/youtube1.jpg</fanart>
+</item>
+
+<item>
+<title>[COLOR lime][B][COLOR red]•[/COLOR] YOUTUBE REPLAY [COLOR red]•[/COLOR][COLOR white]  [/COLOR][/B]</title>
+<utube>UCl6GClF3K5NuEHJSXBKNexQ</utube>
+<code>LLl6GClF3K5NuEHJSXBKNexQ</code>
+<thumbnail>http://s15.postimg.org/7048c7sq3/REPLAY.jpg</thumbnail>
+<fanart>http://www.teknolojii.net/wp-content/uploads/youtube1.jpg</fanart>
+</item>
+
+
+
+
+<item><title>[COLOR white][B]Addon: [COLOR olive][B] Specto Fork [/B][COLOR white][B] Provider: [COLOR olive][B] Mr. Known [/B][/COLOR]</title<link>http://i.imgur.com/BbjsQFK.png</link><thumbnail>http://i.imgur.com/BbjsQFK.png</thumbnail></item>
+
+
+#######################################################################################################################
+
+
+<item>
+<title>[B][COLOR deepskyblue]Filmes:  [/B][COLOR white][B]Por Género[/B][/COLOR]</title
+<link>http://fui.me</link>
+<jsonrpc>plugin://plugin.video.specto/?action=movieGenres</jsonrpc>
+<thumbnail>http://i.imgur.com/VBO806j.jpg</thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<title>[B][COLOR deepskyblue]Filmes:  [/B][COLOR white][B]Por ano[/B][/COLOR]</title
+<thumbnail>http://i.imgur.com/Sjegt6S.jpg</thumbnail>
+<link>http://ignora.me</link>
+<jsonrpc>plugin://plugin.video.specto/?action=movieYears</jsonrpc>
+<fanart></fanart>
+</item>
+
+<item>
+<title>[B][COLOR deepskyblue]Filmes:  [/B][COLOR white][B]Destaques[/B][/COLOR]</title
+<thumbnail>http://i.imgur.com/CV6m1KA.jpg</thumbnail>
+<link>http://ignora.me</link>
+<jsonrpc>plugin://plugin.video.specto/?action=movies&amp;url=featured</jsonrpc>
+<fanart></fanart>
+</item>
+
+<item>
+<title>[B][COLOR deepskyblue]Filmes:  [/B][COLOR white][B]Vencedores de Óscares[/B][/COLOR]</title
+<thumbnail>http://i.imgur.com/OmGGlaK.jpg</thumbnail>
+<link>http://ignora.me</link>
+<jsonrpc>plugin://plugin.video.specto/?action=movies&amp;url=oscars</jsonrpc>
+<fanart></fanart>
+</item>
+
+<item>
+<title>[B][COLOR deepskyblue]Filmes:  [/B][COLOR white][B]Pesquisar[/B][/COLOR]</title
+<thumbnail>http://i.imgur.com/jayVfUc.jpg</thumbnail>
+<link>http://ignora.me</link>
+<jsonrpc>plugin://plugin.video.specto/?action=movieSearch</jsonrpc>
+<fanart></fanart>
+</item>
+
+#######################################################################################################################
+
+
+<item>
+<title>[B][COLOR lime]Séries:  [/B][COLOR white][B]Por Género[/B][/COLOR]</title
+<link>http://fui.me</link>
+<jsonrpc>plugin://plugin.video.specto/?action=tvGenres</jsonrpc>
+<thumbnail>http://i.imgur.com/VBO806j.jpg</thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<title>[B][COLOR lime]Séries:  [/B][COLOR white][B]Por ano[/B][/COLOR]</title
+<thumbnail>http://i.imgur.com/Sjegt6S.jpg</thumbnail>
+<link>http://ignora.me</link>
+<jsonrpc>plugin://plugin.video.specto/?action=tvYears</jsonrpc>
+<fanart></fanart>
+</item>
+
+
+<item>
+<title>[B][COLOR lime]Séries:  [/B][COLOR white][B]Populares[/B][/COLOR]</title
+<thumbnail>http://i.imgur.com/HyRzi57.jpg</thumbnail>
+<link>http://ignora.me</link>
+<jsonrpc>plugin://plugin.video.specto/?action=tvshows&amp;url=popular</jsonrpc>
+<fanart></fanart>
+</item>
+
+<item>
+<title>[B][COLOR lime]Séries:  [/B][COLOR white][B]Calendário das Séries[/B][/COLOR]</title
+<thumbnail>http://i.imgur.com/71COyir.png</thumbnail>
+<link>http://ignora.me</link>
+<jsonrpc>plugin://plugin.video.specto/?action=calendars</jsonrpc>
+<fanart></fanart>
+</item>
+
+
+<item>
+<title>[B][COLOR lime]Séries:  [/B][COLOR white][B]Pesquisar[/B][/COLOR]</title
+<thumbnail>http://i.imgur.com/jayVfUc.jpg</thumbnail>
+<link>http://ignora.me</link>
+<jsonrpc>plugin://plugin.video.specto/?action=tvSearch</jsonrpc>
+<fanart></fanart>
+</item>
+
+#######################################################################################################################
+
+
+
+<item>
+<title>[B][COLOR blue] O MEU SPECTO[/B][/COLOR]</title
+<thumbnail>http://i.imgur.com/jayVfUc</thumbnail>
+<link>http://ignora.me</link>
+<jsonrpc>plugin://plugin.video.specto/?action=myNavigator</jsonrpc>
+<fanart></fanart>
+</item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<item>
+<title>[B][COLOR aquamarine]|[/COLOR][COLOR white]|[/COLOR][COLOR red]|[/COLOR][COLOR yellow] SPORTS 247 [COLOR red]•[/COLOR][COLOR magenta] (Agenda) [/COLOR][/B]</title> 
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[B][COLOR aquamarine]|[/COLOR][COLOR white]|[/COLOR][COLOR red]|[/COLOR][COLOR white] [makelist.param1] [COLOR red]•[/COLOR][/B]</title> 
+<link>plugin://plugin.video.f4mTester/?url=$doregex[url1]&amp;streamtype=HLS&amp;name=INSPIR@TION&amp;iconImage=</link>
+<thumbnail></thumbnail>
+]]></listrepeat>
+<expres><![CDATA[<li><a href="\/watch.*?title=(.*?)\&channel=(.*?)"]]></expres>
+<page>http://www.liveonlinetv247.info/tvchannels.php</page>
+</regex>
+<regex>
+<name>url1</name>
+<expres><![CDATA[<source type=".*?src="(.*?)"]]></expres>
+<page>http://www.liveonlinetv247.info/embed/[makelist.param2].php</page>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>https://images-eu.ssl-images-amazon.com/images/I/41mhboDCaLL.png</thumbnail> 
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<item>
+<title>[COLOR darkgrey][B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR] SPECTRO [/COLOR][COLOR green][COLOR red]•[/COLOR][/B]</title>
+<link>http://fonix.pt</link>
+<jsonrpc>plugin://plugin.video.specto/?url=&mode=main&thumb=&type=movie</jsonrpc>
+<thumbnail>http://upimagens.com/di/7UQD/icon.png</thumbnail>
+<fanart>http://upimagens.com/di/RZCJ/fanart.jpg</fanart></item>
+
+
+=====================================================================================================================
+
+<item>
+<title>[COLOR darkgrey][B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR] Exodus Movies [/COLOR][COLOR green][COLOR red]•[/COLOR][/B]</title>
+<link>http://ignora.me</link>
+<jsonrpc>plugin://plugin.video.exodus/?action=movieNavigator</jsonrpc>
+<thumbnail>https://superrepo.org/static/images/icons/original/xrepository.exodus.png.pagespeed.ic.jNoWECfScl.jpg</thumbnail>
+<fanart>http://upimagens.com/di/RZCJ/fanart.jpg</fanart></item>
+
+
+=====================================================================================================================
+
+
+
+<item>
+<title>[COLOR darkgrey][B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR] FILMS DO SECULO [COLOR red]•[/COLOR][COLOR white] [/COLOR][/B]</title>
+<link>http://fonix.pt</link>
+<externallink>https://goo.gl/RPG5lu</externallink>
+<thumbnail>http://upimagens.com/di/W91A/hollywood.png</thumbnail>
+<fanart>http://upimagens.com/di/RZCJ/fanart.jpg</fanart>
+</item>
+
+
+=====================================================================================================================
+
+<item>
+<title>[COLOR darkgrey][B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR] DOCUMENTARIOS [COLOR red]•[/COLOR][COLOR white] [/COLOR][/B]</title>
+<link>http://fonix.pt</link>
+<externallink>https://goo.gl/zi9ZHT</externallink>
+<thumbnail>http://upimagens.com/di/T7WV/DOCU.png</thumbnail>
+<fanart>http://upimagens.com/di/RZCJ/fanart.jpg</fanart>
+</item>
+
+
+
+<item>
+<title>[COLOR lime][B][COLOR red]•[/COLOR] Portugal Media Center [COLOR red]•[/COLOR][COLOR white]  [/COLOR][/B]</title>
+<link>http://fui.me</link>
+<jsonrpc>plugin://plugin.video.portugal.media.center/</jsonrpc>
+<thumbnail>http://upimagens.com/di/3FUN/icon.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+
+<item>
+<title>[COLOR lime][B][COLOR red]•[/COLOR] Alive HD [COLOR red]•[/COLOR][COLOR white]  [/COLOR][/B]</title>
+<link>http://fui.me</link>
+<jsonrpc>plugin://plugin.video.alive.hd/</jsonrpc>
+<thumbnail>http://s21.postimg.org/77tpk63tj/icon.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+
+
+<item>
+<title>[B][COLOR navy]•[/COLOR][COLOR lavenderblush] Sport Klub [COLOR navy]1 [COLOR white]|[COLOR navy] 2 [COLOR white]|[/COLOR][COLOR navy] 3[/COLOR][/B]</title>
+
+<thumbnail>https://www.thelogodb.com/images/media/logo/vusutv1462898242.png</thumbnail><fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+<item>
+<title>[B][COLOR navy]•[/COLOR][COLOR lavenderblush] Bein Sport La Liga [/COLOR] [COLOR navy]•[/COLOR][COLOR magenta] [/COLOR][/B]</title>
+<link></link>
+<externallink></externallink>
+<thumbnail>http://www.thelogodb.com/images/media/logo/nvghtj1485607808.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+<item>
+<title>[B][COLOR green]•[/COLOR][COLOR darkorange]•[/COLOR][COLOR navy]•[/COLOR][COLOR springgreen] [COLOR lavenderblush]A[/COLOR]RENA[COLOR lavenderblush]V[/COLOR]ISION [COLOR lavenderblush]Plexus[/B][COLOR magenta][/COLOR]</title> 
+
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<item>
+<title>[B][COLOR navy]•[/COLOR][COLOR lavenderblush] [makelist.param1][/COLOR] [COLOR blue][makelist.param2][/COLOR] [COLOR green][makelist.param3] [/B][/COLOR][makelist.param4]</title>
+<link>plugin://program.plexus/?url=[makelist.param4]&amp;mode=1;name=Inspir@tion[makelist.param3]</link>
+</item>	
+]]></listrepeat>
+<expres><![CDATA[center'>(.*?)<[\w\W\s]{0,120}<td>(.*?)<br>(.*?)<[\w\W\s]{0,40}acestream://(.*?)"]]></expres>
+<page>https://avezy.tk/</page>
+<Agent>Mozilla</Agent>
+</regex>
+
+<thumbnail>http://arenavision.in/sites/default/files/FAVICON_AV2015.png</thumbnail>
+<fanart>http://s15.postimg.org/pyrcvek2z/PLEXUS.jpg</fanart></item>
+
+
+
+

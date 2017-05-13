@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+
+
+
+
+
+
+
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR lime] C-SPAN NEWS [COLOR red]•[/COLOR][/B]</title>
+<link>http://cspan1-lh.akamaihd.net/i/cspan1_1@304727/index_1000_av-p.m3u8?sd=10&rebase=on</link>
+<thumbnail>https://pbs.twimg.com/profile_images/564508766926696448/h5NqLPhE_400x400.jpeg</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR lime] C-SPAN NEWS 2 [COLOR red]•[/COLOR][/B]</title>
+<link>http://cspan2-lh.akamaihd.net/i/cspan2_1@304728/index_1000_av-p.m3u8?sd=10&rebase=on</link>
+<thumbnail>https://pbs.twimg.com/profile_images/564508766926696448/h5NqLPhE_400x400.jpeg</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR lime] Bloomberg [COLOR red]•[/COLOR][/B]</title>
+<link>http://cdn3.videos.bloomberg.com/btv/us/master.m3u8</link>
+<link>http://btvasia-i.akamaihd.net/hls/live/203322/btvasia_ios/P1/M24K.m3u8</link>
+<thumbnail>https://www.thelogodb.com/images/media/logo/vptvpr1437950713.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR lime] BH News [COLOR red]•[/COLOR][/B]</title>
+<link>http://edge.z1on.com:1935/1700/3125/3125-hotmedia.sdp/playlist.m3u8</link>
+<thumbnail>http://www.tvmagazine.com.br/imagens/maxibhnews.jpg</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR lime] Cable Noticias 24 [COLOR red]•[/COLOR][/B]</title>
+<link>http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/CNOT/tu1_1.m3u8</link>
+<thumbnail>https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Cable_Noticias_logo.svg/2000px-Cable_Noticias_logo.svg.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR lime] TG NORBA24 [COLOR red]•[/COLOR][/B]</title>
+<link>http://85.17.80.132:80/tgnorba_24/tgnorba_24_source.stream/playlist.m3u8</link>
+<thumbnail>http://a1.mzstatic.com/eu/r30/Purple2/v4/0f/7d/de/0f7ddef0-8a51-ae6d-a08e-1dfec31b988e/icon175x175.jpeg</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR lime] ABC News [COLOR red]•[/COLOR][/B]</title>
+<link>http://abclive.abcnews.com/i/abc_live4@136330/index_800_av-b.m3u8</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/tusqrx1477576863.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR lime] CTV News [COLOR red]•[/COLOR][/B]</title>
+<link>http://ams-lp10.9c9media.com/hls-live/livepkgr/_definst_/liveNews/News18.m3u8</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/xustyw1476665940.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR lime] TVC News [COLOR red]•[/COLOR][/B]</title>
+<link>http://77.92.76.135:1935/tvcnews/livestream/playlist.m3u8</link>
+<thumbnail>https://www.thelogodb.com/images/media/logo/syxwws1469458352.png</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR lime] Reuters News [COLOR red]•[/COLOR][/B]</title>
+<link>http://37.58.85.156/rlo001/ngrp:rlo001.stream_all/playlist.m3u8</link>
+<thumbnail>http://www.thebaron.info/assets/logos/reuters-tv-banner.jpg</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+
+<item>
+<title>[B][COLOR green]|[/COLOR][COLOR gold]|[/COLOR][COLOR red]|[/COLOR][COLOR lime] Skai Greece [COLOR red]•[/COLOR][/B]</title>
+<link>http://iphone.skai.gr.edgesuite.net/iphone_iphone.m3u8</link>
+<thumbnail>http://3.bp.blogspot.com/-ofWC2VhlPiw/VYw-rxyyKQI/AAAAAAAADSc/8hUQzpgS5Gc/s1600/skai574x311.gif</thumbnail>
+<fanart>http://s21.postimg.org/6ngdod4uv/fanart.jpg</fanart></item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inspi[я]ation Links © 2017 All rights reservedd

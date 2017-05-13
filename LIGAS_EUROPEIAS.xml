@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=====================================================================================================================
+<item>
+<title>[B][COLOR red]••vv•• [COLOR gold]AGENDAS [COLOR blueMULTI[/COLOR][COLOR red] ••vv••[/COLOR][/B]</title> 
+<link>http://fui.me</link>
+<thumbnail>http://upimagens.com/di/2QB1/logoinspiration.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+=====================================================================================================================
+
+
+
+
+<item>
+<title>[B][COLOR green]•[/COLOR][COLOR gold]•[/COLOR][COLOR red]•[/COLOR][COLOR aquamarine] SportDevil [/COLOR][COLOR red]•[/COLOR][COLOR magenta] Agendas#1[/COLOR][/B]</title>
+<link>http://fonix.pt</link>
+<externallink>https://pastebin.com/raw/PT0anHEz</externallink>
+<thumbnail>http://www.lbtechtips.com/wp-content/uploads/2016/06/sportsicon.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+<item>
+<title>[B][COLOR green]•[/COLOR][COLOR gold]•[/COLOR][COLOR red]•[/COLOR][COLOR aquamarine] SportDevil [/COLOR][COLOR red]•[/COLOR][COLOR magenta] Agenda#2 [/COLOR][/B]</title>
+<link>http://fonix.pt</link>
+<jsonrpc>plugin://plugin.video.SportsDevil/?item=url=tv.cfg&amp;mode=1</jsonrpc>
+<thumbnail>http://upimagens.com/di/PT0T/original.jpg</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+
+
+<item>
+<title>[B][COLOR green]•[/COLOR][COLOR gold]•[/COLOR][COLOR red]•[/COLOR][COLOR aquamarine] Russos Sport  [COLOR white]Channels [COLOR red]•[/COLOR][COLOR magenta] [Plexus] [/COLOR][/B]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[<title>[B][COLOR green]•[/COLOR][COLOR gold]•[/COLOR][COLOR red]•[/COLOR][/B] [COLOR white][makelist.param1][/COLOR]</title><link>plugin://program.plexus/?url=[makelist.param2]&amp;mode=1&amp;name=Arenavision</link>
+<thumbnail>http://upimagens.com/di/PT0T/original.jpg</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart>
+]]></listrepeat>
+<expres>EXTINF:-1,(.*?)\nacestream://(.*)</expres>
+<page>http://super-pomoyka.us.to/trash/ttv-list/ttv.sport.player.m3u</page>
+<agent>Kodi/15.2 (Windows NT 6.1) App_Bitness/32 Version/15.2-Git:20151019-02e7013</agent>
+</regex>
+<thumbnail>https://i.ytimg.com/vi/6QZjrIIpjqE/0.jpg</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart>
+</item>
+
+
+
+=====================================================================================================================
+<item>
+<title>[B][COLOR red]••vv•• [COLOR gold]CHANNELS BY [COLOR blue]Shani[/COLOR][COLOR red] ••vv••[/COLOR][/B]</title> 
+<link>http://fui.me</link>
+<thumbnail>http://upimagens.com/di/2QB1/logoinspiration.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+=====================================================================================================================
+
+
+
+
+<item>
+<title>[B][COLOR green]•[/COLOR][COLOR gold]•[/COLOR][COLOR red]•[/COLOR][COLOR yellowgreen][COLOR white] Paktv Sports [/COLOR] Channels[COLOR red]•[/COLOR][COLOR white] [by shani][/COLOR][/B]</title>
+<link>http://fonix.pt</link>
+<jsonrpc>plugin://plugin.video.ZemTV-shani/?mode=52&amp;name=PAKTVSPORTS&amp;url=sss</jsonrpc>
+<thumbnail>http://upimagens.com/di/PT0T/original.jpg</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+
+
+<item>
+<title>[B][COLOR green]•[/COLOR][COLOR gold]•[/COLOR][COLOR red]•[/COLOR][COLOR yellowgreen][COLOR white] UFC | FIGH | BOXE [/COLOR] Channels [COLOR red]•[/COLOR][COLOR white] [by shani] [/COLOR][/B]</title>
+<link>http://fonix.pt</link>
+<jsonrpc>plugin://plugin.video.ZemTV-shani/?mode=62&amp;name=%INSPIRATION&amp;url=Boxing%20%26%20Wrestling</jsonrpc>
+<thumbnail>http://s10.postimg.org/d8os1jyzd/ufc_tv.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+
+<item>
+<title>[B][COLOR green]•[/COLOR][COLOR gold]•[/COLOR][COLOR red]•[/COLOR][COLOR yellowgreen] [COLOR white]SKY SPORT[/COLOR] Channels [COLOR red]•[/COLOR][COLOR white] [by shani] [/COLOR][/B]</title>
+<link>http://fui.me</link>
+<jsonrpc>plugin://plugin.video.ZemTV-shani/?mode=62&amp;url=Sky%20Sports&amp;name=%INSPIR@TION</jsonrpc>
+<thumbnail>https://www.thelogodb.com/images/media/logo/qsywts1434037798.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+<item>
+<title>[B][COLOR green]•[/COLOR][COLOR gold]•[/COLOR][COLOR red]•[/COLOR][COLOR yellowgreen] [COLOR white]BEIN SPORT[/COLOR] Channels [COLOR red]•[/COLOR][COLOR white] [by shani] [/COLOR][/B]</title>
+<link>http://fui.me</link>
+<jsonrpc>plugin://plugin.video.ZemTV-shani/?mode=62&amp;url=Bein%20Sports%20WIFI&amp;name=%INSPIR@TION</jsonrpc>
+<thumbnail>https://lh6.googleusercontent.com/-whl07vja9FU/AAAAAAAAAAI/AAAAAAAAqLs/MGPRlYjOjAc/s0-c-k-no-ns/photo.jpg</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+
+<item>
+<title>[B][COLOR green]•[/COLOR][COLOR gold]•[/COLOR][COLOR red]•[/COLOR][COLOR yellowgreen] [COLOR white]FOX SPORTS [/COLOR] Channels [COLOR red]•[/COLOR][COLOR white] [by shani] [/COLOR][/B]</title>
+<link>http://fonix.pt</link>
+<jsonrpc>plugin://plugin.video.ZemTV-shani/?mode=71&amp;name=%5bCOLOR%20red%5dFox%20sports%5b%2fCOLOR%5d&amp;url=Fox%20Sports</jsonrpc>
+<thumbnail>https://www.thelogodb.com/images/media/logo/uyusws1446157799.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+<item>
+<title>[B][COLOR green]•[/COLOR][COLOR gold]•[/COLOR][COLOR red]•[/COLOR][COLOR yellowgreen] [COLOR white]EUROSPORTS [/COLOR] Channels [COLOR red]•[/COLOR][COLOR white] [by shani] [/COLOR][/B]</title>
+<link>http://fonix.pt</link>
+<jsonrpc>plugin://plugin.video.ZemTV-shani/?mode=71&amp;name=%5bCOLOR%20red%5dEuro%20sports%5b%2fCOLOR%5d&amp;url=Euro%20Sports</jsonrpc>
+<thumbnail>https://lh3.googleusercontent.com/ZGCCKqsqte9qO5N8GfjVIwrrSOH_5IPRIf8ho7ROZ8gwEAEdLUbt_uQqsAOe6cDo64s=w300</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+<item>
+<title>[B][COLOR green]•[/COLOR][COLOR gold]•[/COLOR][COLOR red]•[/COLOR][COLOR yellowgreen] [COLOR white]ARENA SPORT[/COLOR] Channels [COLOR red]•[/COLOR][COLOR white] [by shani] [/COLOR][/B]</title>
+<link>http://fui.me</link>
+<jsonrpc>plugin://plugin.video.ZemTV-shani/?mode=71&amp;url=Arena%20Sports&amp;name=%INSPIR@TION</jsonrpc>
+<thumbnail>http://www.hteronet.ba/upload/pages/arena_sport_kanali_173012.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+
+<item>
+<title>[B][COLOR green]•[/COLOR][COLOR gold]•[/COLOR][COLOR red]•[/COLOR][COLOR yellowgreen][COLOR white] TSN[/COLOR]  Channels [COLOR red]•[/COLOR][COLOR white] [by shani] [/COLOR][/B]</title>
+<link>http://fui.me</link>
+<jsonrpc>plugin://plugin.video.ZemTV-shani/?mode=70&amp;url=TSN%20Sports&amp;name=&INSPIR@TION</jsonrpc>
+<thumbnail>https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/TSN_Logo.svg/2000px-TSN_Logo.svg.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=====================================================================================================================
+<item>
+<title>[B][COLOR red]••vv•• [COLOR gold] DIVERSE SPORT [COLOR blue]Channels[/COLOR][COLOR red] ••vv••[/COLOR][/B]</title> 
+<link>http://fui.me</link>
+<thumbnail>http://upimagens.com/di/2QB1/logoinspiration.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+=====================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+<item>
+<title>[B][COLOR navy]•[/COLOR][COLOR red] Fight [/COLOR][COLOR lavenderblush]Network[/COLOR][/B][COLOR springgreen] (http) [/COLOR]</title>
+<link>http://46.249.60.210:9981/play/a02h</link>
+<thumbnail>https://www.thelogodb.com/images/media/logo/sxuxsv1451905938.png/medium</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+
+<item>
+<title>[B][COLOR red]•[/COLOR][COLOR lavenderblush] NFL [COLOR red]•[/COLOR][/B][COLOR white]  [/COLOR]</title>
+<link>https://svglive3-event.level3.nfl.com/nflent3/live/now/NFLNOW_4500k.m3u8</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/yptxsp1478034120.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+
+
+
+<item>
+<title>[B][COLOR red]•[/COLOR][COLOR white] NBCS [COLOR red]Sports[/COLOR][/B]</title>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://www.shadow-net.org/channels/NBC-Sports-Netw..html;name=Inspir@tion;iconImage=$$lsname=NBCS</link>
+<thumbnail>https://www.thelogodb.com/images/media/logo/vxvtup1434505598.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+
+<item>
+<title>[B][COLOR red]•[/COLOR][COLOR white] Fight Network [COLOR red][/COLOR][/B]</title>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://www.shadow-net.org/channels/Fight-Network.html;name=Inspir@tion;iconImage=$$lsname=Fight-Network</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://tvpor-internet.com/ufc-network-en-vivo.html$$lsname=ESP</link>
+
+<thumbnail>https://www.thelogodb.com/images/media/logo/sxuxsv1451905938.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+<item>
+<title>[B][COLOR red]•[/COLOR][COLOR white] Box Nation [COLOR red][/COLOR][/B]</title>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://www.liveonlinetv247.info/boxnation.php;name=Inspir@tion;iconImage=$$lsname=Box_Nation[1]</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://mcdn-play-358.5centscdn.net/boxnationextv/5c6d78cffa59e129f040fcec2d788532.sdp/index.m3u8;name=Inspir@tion;iconImage=$$lsname=Box_Nation[1]</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://www.shadow-net.org/channels/BoxNation.html;name=Inspir@tion;iconImage=$$lsname=Box_Nation[1]</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://sports4u.ms/frames/boxnation.php;name=Inspir@tion;iconImage=$$lsname=Box_Nation[2]</link>
+
+<thumbnail>https://www.thelogodb.com/images/media/logo/vuvwsr1433336020.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+
+<item>
+<title>[B][COLOR green]•[/COLOR][COLOR gold]•[/COLOR][COLOR red]•[/COLOR][COLOR yellowgreen][COLOR white] GOLF[/COLOR]  Channels [COLOR red]•[/COLOR][COLOR white] [/COLOR][/B]</title>
+<link>http://tvegolf-i.akamaihd.net/hls/live/218225/golfx/2596k/prog.m3u8|X-Forwarded-For=209.239.112.104$$lsname=SkyCNBC GOLF HQ</link>
+<link>http://tvegolf-i.Akamaihd.net/hls/live/218225/golfx/4296k/prog.m3u8|X-Forwarded-For=209.239.112.104$$lsname=SkyCNBC GOLF HD</link>
+<link>http://www.mytvonline.org/fra/golf.m3u8$$lsname=GOLF</link>
+<link>http://live-trl102.abweb.com/liveabtrl102/ngrp:golfchannel.stream_bis/chunklist_b1096000.m3u8$$lsname=GOLF</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://hdfree.tv/live/stv4.php$$lsname=SkySportv 4</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://www.bigcast.us/embedhd.php?v=skys4&vw=650&vh=390$$lsname=SkySky Sport4</link>
+
+<thumbnail>http://s33.postimg.org/pq22u3gy7/wallhaven_18237.jpg</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+
+
+<item>
+<title>[B][COLOR green]•[/COLOR][COLOR gold]•[/COLOR][COLOR red]•[/COLOR][COLOR yellowgreen][COLOR white] UFC | FIGH | BOXE[/COLOR] Channels [/COLOR][COLOR red]•[/COLOR][COLOR white] [by Filmon] [/COLOR][/B]</title>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://tvpor-internet.com/ufc-network-en-vivo.html$$lsname=BOXNATION [sportdevil]</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://cricfree.sc/box-nation-live-stream-box1$$lsname=BOXNATION [sportdevil]</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=https://www.filmon.com/channel/the-best-of-the-ufcr&amp;name=INSPIR@TION$$lsname=Sky[the best of the ufc]</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=https://www.filmon.com/channel/destination-x&amp;name=INSPIR@TION$$lsname=Sky[destination X]</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://www.filmon.com/channel/ufc-next&amp;name=INSPIR@TION$$lsname=Sky[Ufc Next]</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://www.filmon.com/channel/fightv-plus-sports&amp;name=INSPIR@TION$$lsname=Sky[FightvPlus]</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://www.filmon.com/channel/live-boxing&amp;name=INSPIR@TION$$lsname=Sky[live Boxing]</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://www.filmon.com/channel/glory-kickboxing&amp;name=INSPIR@TION$$lsname=Sky[Glory Kickboxing]</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://www.filmon.com/channel/pugilism-tv&amp;name=INSPIR@TION$$lsname=Sky[Pugilism Tv]</link>
+<thumbnail>http://s10.postimg.org/d8os1jyzd/ufc_tv.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+
+<item>
+<title>[B][COLOR green]•[/COLOR][COLOR gold]•[/COLOR][COLOR red]•[/COLOR][COLOR yellowgreen] [COLOR white]SKY SPORT[/COLOR] Channels [COLOR red]•[/COLOR][COLOR white] [/COLOR][/B]</title>
+
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://livesport.pw/SkySports1.html$$lsname=SportsDevil_[1]</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://livesport.pw/SkySports2.html$$lsname=SportsDevil_[2]</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://livesport.pw/SkySports3.html$$lsname=SportsDevil_[3]</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://livesport.pw/SkySports4.html$$lsname=SportsDevil_[4]</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://livesport.pw/SkySports5.html$$lsname=SportsDevil_[5]</link>
+
+
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://www.bigcast.us/embedhd.php?v=skys1&vw=650&vh=390$$lsname=SkySport 1</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://www.bigcast.us/embedhd.php?v=skys2&vw=650&vh=390$$lsname=SkySport 2</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://www.bigcast.us/embedhd.php?v=skys3&vw=650&vh=390$$lsname=SkySport 3</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://www.bigcast.us/embedhd.php?v=skys4&vw=650&vh=390$$lsname=SkySport 4</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3Dstreams%26url=http://www.bigcast.us/embedhd.php?v=skys5&vw=650&vh=390$$lsname=SkySport 5</link>
+<thumbnail>https://www.thelogodb.com/images/media/logo/qsywts1434037798.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+
+
+<item>
+<title>[B][COLOR green]•[/COLOR][COLOR gold]•[/COLOR][COLOR red]•[/COLOR][COLOR yellowgreen][COLOR white] Basquetebol[/COLOR] Channels[/COLOR][/B]</title>
+<link>http://fonix.pt</link>
+<externallink>https://pastebin.com/raw/79RDhUhY</externallink>
+<thumbnail>https://www.thelogodb.com/images/media/logo/vvvvtw1465807769.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+
+<item>
+<title>[B][COLOR green]•[/COLOR][COLOR gold]•[/COLOR][COLOR red]•[/COLOR][COLOR yellowgreen][COLOR white] SPORT 1|2 UA [COLOR red]•[/COLOR][COLOR magenta][/COLOR][/B]</title>
+<link>plugin://plugin.video.p2p-streams/?url=acestream://b2825d1f94b08f246051365a75ad3b9198832705&amp;mode=1&amp;name=INSPIR@TION&amp;iconImage=</link>
+<link>plugin://plugin.video.p2p-streams/?url=acestream://d4f5ea272e122f75f1030080c2534674126ffa4d&amp;mode=1&amp;name=INSPIR@TION&amp;iconImage=</link>
+<link>http://178.172.245.155:8121/sport1</link>
+<thumbnail>https://s21.postimg.org/w2d7qqsd3/sport1.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+<item>
+<title>[B][COLOR green]•[/COLOR][COLOR gold]•[/COLOR][COLOR red]•[/COLOR][COLOR yellowgreen][COLOR white] SPORT 1|2 Hungaro [COLOR red]•[/COLOR][COLOR magenta][/COLOR][/B]</title>
+<link>http://openlist.sytes.net:5022/stream/3h14uh/playlist.m3u8$$lsname=sport1</link>
+<link>plugin://plugin.video.p2p-streams/?url=acestream://224647f6b35f20a68f72633d588a8f208a896bcc&amp;mode=1&amp;name=sport1&amp;iconImage=</link>
+<link>plugin://plugin.video.p2p-streams/?url=acestream://2cf97774d9d6fdfcc4584569b7dd48c041484eba&amp;mode=1&amp;name=sport2&amp;iconImage=</link>
+<thumbnail>http://geem.eu/tv/images/channels/sport1.gif</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+
+
+<item>
+<title>[B][COLOR lavenderblush]•[/COLOR][COLOR aquamarine] BT SPORT [COLOR lavenderblush]1 [/B][COLOR magenta][antivirus pode bloquear IP] (desbloqueie)[/COLOR]</title>
+
+<link>$doregex[select_Url]</link>
+<regex>
+<name>select_Url</name>
+<expres>$pyFunction: '$doregex[get_sxstream]|User-Agent=Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36' if not '$doregex[get_sxstream]|User-Agent=Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'=='' else '$doregex[get_sxstream1]|User-Agent=iPhone'</expres>
+<page></page>
+</regex>
+<regex>
+<name>get_sxstream</name>
+<expres>src=.*[",'](.*m3u8.*?)[",']</expres>
+<page>http://www.liveonlinetv247.info/embed/btsport1.php</page>
+<referer>http://www.liveonlinetv247.info/</referer>
+<agent></agent>
+</regex>
+<regex>
+<name>get_sxstream1</name>
+<expres>src=.*[",'](.*m3u8.*?)[",']</expres>
+<page>http://www.liveonlinetv247.info/embed/btsport1.php</page>
+<referer>http://www.liveonlinetv247.info/</referer>
+<agent></agent>
+</regex>
+
+<thumbnail>https://www.thelogodb.com/images/media/logo/wysstw1434038860.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart>
+</item>
+
+=====================================================================================================================
+
+<item>
+<title>[B][COLOR lavenderblush]•[/COLOR][COLOR aquamarine] BT SPORT [COLOR lavenderblush]2 [/B][COLOR magenta][antivirus pode bloquear IP] (desbloqueie)[/COLOR]</title>
+
+<link>$doregex[select_Url]</link>
+<regex>
+<name>select_Url</name>
+<expres>$pyFunction: '$doregex[get_sxstream]|User-Agent=Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36' if not '$doregex[get_sxstream]|User-Agent=Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'=='' else '$doregex[get_sxstream1]|User-Agent=iPhone'</expres>
+<page></page>
+</regex>
+<regex>
+<name>get_sxstream</name>
+<expres>src=.*[",'](.*m3u8.*?)[",']</expres>
+<page>http://www.liveonlinetv247.info/embed/btsport2.php</page>
+<referer>http://www.liveonlinetv247.info/</referer>
+<agent></agent>
+</regex>
+<regex>
+<name>get_sxstream1</name>
+<expres>src=.*[",'](.*m3u8.*?)[",']</expres>
+<page>http://www.liveonlinetv247.info/embed/btsport2.php</page>
+<referer>http://www.liveonlinetv247.info/</referer>
+<agent></agent>
+</regex>
+
+<thumbnail>https://www.thelogodb.com/images/media/logo/wysstw1434038860.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart>
+</item>
+
+=====================================================================================================================
+
+
+<item>
+<title>[B][COLOR lavenderblush]•[/COLOR][COLOR aquamarine] BT SPORT [COLOR lavenderblush]3 [/B][COLOR magenta][antivirus pode bloquear IP] (desbloqueie)[/COLOR]</title>
+
+<link>$doregex[select_Url]</link>
+<regex>
+<name>select_Url</name>
+<expres>$pyFunction: '$doregex[get_sxstream]|User-Agent=Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36' if not '$doregex[get_sxstream]|User-Agent=Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'=='' else '$doregex[get_sxstream1]|User-Agent=iPhone'</expres>
+<page></page>
+</regex>
+<regex>
+<name>get_sxstream</name>
+<expres>src=.*[",'](.*m3u8.*?)[",']</expres>
+<page>http://www.liveonlinetv247.info/embed/btsporteurope.php</page>
+<referer>http://www.liveonlinetv247.info/</referer>
+<agent></agent>
+</regex>
+<regex>
+<name>get_sxstream1</name>
+<expres>src=.*[",'](.*m3u8.*?)[",']</expres>
+<page>http://www.liveonlinetv247.info/embed/btsporteurope.php</page>
+<referer>http://www.liveonlinetv247.info/</referer>
+<agent></agent>
+</regex>
+
+<thumbnail>https://www.thelogodb.com/images/media/logo/wysstw1434038860.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart>
+</item>
+
+=====================================================================================================================
+
+<item>
+<title>[B][COLOR lavenderblush]•[/COLOR][COLOR aquamarine] BT SPORT [COLOR lavenderblush]ESPN [/B][COLOR magenta][antivirus pode bloquear IP] (desbloqueie)[/COLOR]</title>
+
+<link>$doregex[select_Url]</link>
+<regex>
+<name>select_Url</name>
+<expres>$pyFunction: '$doregex[get_sxstream]|User-Agent=Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36' if not '$doregex[get_sxstream]|User-Agent=Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'=='' else '$doregex[get_sxstream1]|User-Agent=iPhone'</expres>
+<page></page>
+</regex>
+<regex>
+<name>get_sxstream</name>
+<expres>src=.*[",'](.*m3u8.*?)[",']</expres>
+<page>http://www.liveonlinetv247.info/embed/btsportespn.php</page>
+<referer>http://www.liveonlinetv247.info/</referer>
+<agent></agent>
+</regex>
+<regex>
+<name>get_sxstream1</name>
+<expres>src=.*[",'](.*m3u8.*?)[",']</expres>
+<page>http://www.liveonlinetv247.info/embed/btsportespn.php</page>
+<referer>http://www.liveonlinetv247.info/</referer>
+<agent></agent>
+</regex>
+
+<thumbnail>https://www.thelogodb.com/images/media/logo/wysstw1434038860.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart>
+</item>
+
+=====================================================================================================================
+
+
+
+
+<item> 
+<title>[B][COLOR lavenderblush]•[/COLOR][COLOR aquamarine] Bein Sport [COLOR lavenderblush]1 [/B][COLOR magenta][antivirus pode bloquear IP] (desbloqueie)[/COLOR]</title>
+
+
+<link>$doregex[select_Url]</link>
+
+<regex>
+<name>select_Url</name>
+<expres>$pyFunction: '$doregex[get_sxstream]|User-Agent=Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36' if not '$doregex[get_sxstream]|User-Agent=Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'=='' else '$doregex[get_sxstream1]|User-Agent=iPhone'</expres>
+<page></page>
+</regex>
+<regex>
+<name>get_sxstream</name>
+<expres>src=.*[",'](.*m3u8.*?)[",']</expres>
+<page>http://www.liveonlinetv247.info/embed/beinsports1france.php</page>
+<referer>http://www.liveonlinetv247.info/</referer>
+<agent></agent>
+</regex>
+<regex>
+<name>get_sxstream1</name>
+<expres>src=.*[",'](.*m3u8.*?)[",']</expres>
+<page>http://www.liveonlinetv247.info/embed/beinsports1france.php</page>
+<referer>http://www.liveonlinetv247.info/</referer>
+<agent></agent>
+</regex>
+<thumbnail>http://www.thelogodb.com/images/media/logo/kksjj61485860381.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+=====================================================================================================================
+
+
+
+<item> 
+<title>[B][COLOR lavenderblush]•[/COLOR][COLOR aquamarine] Bein Sport [COLOR lavenderblush]2 [/B][COLOR magenta][antivirus pode bloquear IP] (desbloqueie)[/COLOR]</title>
+
+<link>$doregex[select_Url]</link>
+
+<regex>
+<name>select_Url</name>
+<expres>$pyFunction: '$doregex[get_sxstream]|User-Agent=Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36' if not '$doregex[get_sxstream]|User-Agent=Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'=='' else '$doregex[get_sxstream1]|User-Agent=iPhone'</expres>
+<page></page>
+</regex>
+<regex>
+<name>get_sxstream</name>
+<expres>src=.*[",'](.*m3u8.*?)[",']</expres>
+<page>http://www.liveonlinetv247.info/embed/beinsports2france.php</page>
+<referer>http://www.liveonlinetv247.info/</referer>
+<agent></agent>
+</regex>
+<regex>
+<name>get_sxstream1</name>
+<expres>src=.*[",'](.*m3u8.*?)[",']</expres>
+<page>http://www.liveonlinetv247.info/embed/beinsports2france.php</page>
+<referer>http://www.liveonlinetv247.info/</referer>
+<agent></agent>
+</regex>
+<thumbnail>http://www.thelogodb.com/images/media/logo/kksjj61485860381.png</thumbnail>
+<fanart>https://upimagens.com/di/JIBP/fanart.jpg</fanart></item>
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inspi[я]ation Links © 2017 All rights reserved
